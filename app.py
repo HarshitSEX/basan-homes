@@ -4,6 +4,11 @@ from flask_mail import Mail, Message
 
 app = Flask(__name__)
 
+@app.before_request
+def maintenance():
+    from flask import render_template
+    return render_template("maintenance.html"), 503
+
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
