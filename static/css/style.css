@@ -647,3 +647,10 @@ body {
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .nav-links { display: none; }
 }
+/* Hide Ray White watermark by shifting images up */
+img[src*="house"] {
+  object-position: center 10% !important;
+}
+.page-hero-img {
+  background-position: center 10% !important;
+}

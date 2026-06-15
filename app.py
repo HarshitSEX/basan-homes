@@ -1,3 +1,4 @@
+import threading
 from flask import Flask, render_template, request
 from flask_mail import Mail, Message
 
@@ -6,11 +7,18 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'GMAIL_ADDRESS_HERE'
-app.config['MAIL_PASSWORD'] = 'APP_PASSWORD_HERE'
-app.config['MAIL_DEFAULT_SENDER'] = 'GMAIL_ADDRESS_HERE'
+app.config['MAIL_USERNAME'] = 'basanhomes@gmail.com'
+app.config['MAIL_PASSWORD'] = 'YOUR_APP_PASSWORD'
+app.config['MAIL_DEFAULT_SENDER'] = 'basanhomes@gmail.com'
 
 mail = Mail(app)
+
+def send_async_email(app, msg):
+    with app.app_context():
+        try:
+            mail.send(msg)
+        except Exception as e:
+            print(f"Email error: {e}")
 
 @app.route("/")
 def home():
@@ -180,7 +188,7 @@ def contact():
         try:
             msg = Message(
                 subject=f"New Enquiry from {name} — Basan Homes",
-                recipients=["operations@basanhomes.com.au"],
+                recipients=["basanhomes@gmail.com"],
                 body=f"""
 New enquiry from Basan Homes website:
 
@@ -196,7 +204,7 @@ Message:
 {message}
                 """
             )
-            mail.send(msg)
+            threading.Thread(target=send_async_email, args=(app, msg)).start()
             sent = True
         except Exception as e:
             print(f"Email error: {e}")
