@@ -20,6 +20,11 @@ def send_async_email(app, msg):
         except Exception as e:
             print(f"Email error: {e}")
 
+@app.before_request
+def maintenance():
+    from flask import render_template
+    return render_template("maintenance.html"), 503
+
 @app.route("/")
 def home():
     return render_template("index.html")

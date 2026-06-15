@@ -1,39 +1,31 @@
-{% extends "base.html" %}
-{% block content %}
-<div class="page-hero">
-  <div class="page-hero-img" style="background-image:url('/static/images/house5.webp"></div>
-  <div class="page-hero-overlay"></div>
-  <div class="page-hero-content">
-    <div class="hero-badge">🔧 Basan Homes Maintenance</div>
-    <h1>Fixed <em>Right,</em><br>First Time</h1>
-    <p>Professional property maintenance and repair services across Melbourne's West. Fast response, quality workmanship and honest pricing — every time.</p>
-    <a href="/contact" class="btn-white">Book a Service →</a>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basan Homes - Under Maintenance</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Georgia', serif;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container { max-width: 600px; padding: 40px; }
+    h1 { font-size: 48px; color: #4d8c2f; margin-bottom: 20px; }
+    p { font-size: 18px; color: #666; line-height: 1.8; }
+    .logo { font-size: 28px; font-weight: bold; color: #4d8c2f; margin-bottom: 40px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">Basan Homes</div>
+    <h1>🔧 Under Maintenance</h1>
+    <p>We're currently making improvements to our website.<br>We'll be back shortly. Thank you for your patience!</p>
+    <br><br>
+    <p>📞 Contact us: operations@basanhomes.com.au</p>
   </div>
-</div>
-<div class="trust-bar">
-  <div class="trust-bar-inner">
-    <div class="trust-item reveal"><span>⚡</span><span>Same-Day Response Available</span></div>
-    <div class="trust-item reveal reveal-delay-1"><span>🔒</span><span>Fully Insured Tradespeople</span></div>
-    <div class="trust-item reveal reveal-delay-2"><span>💰</span><span>Upfront Transparent Pricing</span></div>
-    <div class="trust-item reveal reveal-delay-3"><span>📍</span><span>All of Melbourne's West</span></div>
-  </div>
-</div>
-<div class="section">
-  <span class="section-label reveal">What We Fix</span>
-  <h2 class="reveal reveal-delay-1">Our Maintenance <em>Services</em></h2>
-  <p class="section-desc reveal reveal-delay-2">Whether it's an urgent repair or ongoing property maintenance — Basan Homes is Melbourne West's go-to team for reliable, prompt property care. Click any service to learn more.</p>
-  <div class="cards">
-    <div class="card reveal reveal-delay-1"><span class="card-icon">🔧</span><h3>General Repairs</h3><p>Doors, windows, walls, floors, fences — we fix all general property repairs quickly and professionally at honest prices.</p><br><a href="/maintenance/repairs" class="btn-outline">Learn More →</a></div>
-    <div class="card reveal reveal-delay-2"><span class="card-icon">🚿</span><h3>Plumbing</h3><p>Leaks, blocked drains, hot water systems and burst pipes. Licensed plumbers with fast response across Melbourne's West.</p><br><a href="/maintenance/plumbing" class="btn-outline">Learn More →</a></div>
-    <div class="card reveal reveal-delay-3"><span class="card-icon">⚡</span><h3>Electrical</h3><p>Safety switches, power points, lighting and switchboard upgrades. All work by licensed electricians to Australian standards.</p><br><a href="/maintenance/electrical" class="btn-outline">Learn More →</a></div>
-    <div class="card reveal reveal-delay-4"><span class="card-icon">🎨</span><h3>Painting & Plastering</h3><p>Interior and exterior painting, feature walls, ceiling and plaster repairs to a flawless professional finish.</p><br><a href="/maintenance/painting" class="btn-outline">Learn More →</a></div>
-    <div class="card reveal reveal-delay-1"><span class="card-icon">🌿</span><h3>Garden & Outdoor</h3><p>Garden maintenance, fencing, decking, concrete paths and outdoor area upkeep for homes and investment properties.</p><br><a href="/maintenance/garden" class="btn-outline">Learn More →</a></div>
-    <div class="card reveal reveal-delay-2"><span class="card-icon">📋</span><h3>Condition Reports</h3><p>Detailed property condition reports for landlords and property managers. Comprehensive, fast and professionally documented.</p><br><a href="/maintenance/condition-reports" class="btn-outline">Learn More →</a></div>
-  </div>
-</div>
-<div class="green-strip">
-  <h2 class="reveal">Need Something <em>Fixed?</em></h2>
-  <p class="reveal reveal-delay-1">We respond fast and get it done right. Contact us today.</p>
-  <a href="/contact" class="btn-white reveal reveal-delay-2">Book a Service →</a>
-</div>
-{% endblock %}
+</body>
+</html>
