@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-hero">
+  <div class="page-hero-img" style="background-image:url('/static/images/house2.webp"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="hero-badge">🏠 New Home Builds</div>
+    <h1>Your Dream Home,<br><em>Built Right</em></h1>
+    <p>Custom new home builds across Melbourne's West. From first consultation to handover — we manage everything so you don't have to.</p>
+    <a href="/contact" class="btn-white">Get a Free Quote →</a>
+  </div>
+</div>
+<div class="section">
+  <span class="section-label reveal">New Home Builds</span>
+  <h2 class="reveal reveal-delay-1">Everything You Need,<br><em>From the Ground Up</em></h2>
+  <p class="section-desc reveal reveal-delay-2">Building a new home in Melbourne's West is one of the biggest investments you'll ever make. Our experienced team handles every detail — from council permits and site preparation right through to the final coat of paint and key handover.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:60px;">
+    <div class="reveal reveal-delay-1">
+      <img src="/static/images/house1.webp" alt="New Australian home Melbourne West" style="width:100%;height:440px;object-fit:cover;border-radius:24px;box-shadow:0 32px 80px rgba(0,0,0,0.12);">
+    </div>
+    <div class="reveal reveal-delay-2">
+      <h3 style="font-family:'Playfair Display',serif;font-size:28px;margin-bottom:16px;">What's Included</h3>
+      <ul class="checklist">
+        <li>Free initial consultation and site assessment</li>
+        <li>Full architectural design service</li>
+        <li>Council permit and VBA approval management</li>
+        <li>Site clearing and preparation</li>
+        <li>Slab, frame, roofing and lock-up stage</li>
+        <li>Fit-out — electrical, plumbing, insulation</li>
+        <li>Internal and external finishes</li>
+        <li>Landscaping and driveway</li>
+        <li>Final inspection and handover</li>
+        <li>Structural warranty and after-care support</li>
+      </ul>
+      <br><br>
+      <a href="/contact" class="btn-green">Start Your Build →</a>
+    </div>
+  </div>
+</div>
+<div style="background:#f7f7f5;padding:100px 48px;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <span class="section-label reveal">Gallery</span>
+    <h2 style="font-family:'Playfair Display',serif;font-size:40px;font-weight:700;margin-bottom:48px;" class="reveal">New Homes We've <em style="color:#4d8c2f;font-style:italic;">Built</em></h2>
+    <div class="image-grid">
+      <div class="image-grid-item reveal reveal-delay-1"><img src="/static/images/house2.webp" alt="New home Melbourne"><div class="img-label">4 Bed New Build — Hoppers Crossing</div></div>
+      <div class="image-grid-item reveal reveal-delay-2"><img src="/static/images/house2.webp" alt="Modern Australian home"><div class="img-label">Modern Family Home — Point Cook</div></div>
+      <div class="image-grid-item reveal reveal-delay-3"><img src="/static/images/house3.webp" alt="New home build"><div class="img-label">Custom Build — Werribee</div></div>
+    </div>
+  </div>
+</div>
+
+<div style="background:#f7f7f5;padding:80px 48px;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <span class="section-label reveal">Our Minimum Standard</span>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;line-height:1.15;margin-bottom:20px;" class="reveal reveal-delay-1">What You Can Always <em style="color:#4d8c2f;font-style:italic;">Expect From Us</em></h2>
+    <p style="font-size:16px;color:#666;line-height:1.9;max-width:600px;margin-bottom:48px;font-weight:300;" class="reveal reveal-delay-2">Every single job we do — no matter how big or small — is held to the same minimum standard. This is our promise to every customer.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;">
+      <div class="reveal reveal-delay-1">
+        <ul class="checklist">
+          <li>We arrive on time — or we call ahead if anything changes</li>
+          <li>We give you a clear upfront price before any work starts</li>
+          <li>We protect your property while we work — drop sheets, shoe covers, clean up after ourselves</li>
+          <li>We use quality materials and proper techniques — no shortcuts</li>
+          <li>We don't leave until the job is done to your satisfaction</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <ul class="checklist">
+          <li>We communicate clearly throughout — no surprises, no guessing</li>
+          <li>We carry full public liability insurance on every job</li>
+          <li>We provide a written invoice with full details of work completed</li>
+          <li>We're available by phone and WhatsApp if you have questions after the job</li>
+          <li>If something isn't right, we come back and fix it — no arguments</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="green-strip">
+  <h2 class="reveal">Ready to Build Your <em>New Home?</em></h2>
+  <p class="reveal reveal-delay-1">Get your free quote today. Fixed pricing, no surprises.</p>
+  <a href="/contact" class="btn-white reveal reveal-delay-2">Get a Free Quote →</a>
+</div>
+{% endblock %}

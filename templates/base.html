@@ -29,8 +29,8 @@
     * { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { font-family:'DM Sans',sans-serif; background:white; color:#1a1a1a; overflow-x:hidden; font-size:18px; }
-    ::-webkit-scrollbar { width:3px; }
-    ::-webkit-scrollbar-thumb { background:#4d8c2f; }
+    ::-webkit-scrollbar { width:8px; }
+    ::-webkit-scrollbar-thumb { background:#4d8c2f; border-radius:10px; } ::-webkit-scrollbar-track { background:#f0f7eb; }
 
     .logo-watermark {
       position:fixed; top:50%; left:50%;
@@ -64,7 +64,7 @@
       height:80px;
     }
 
-    .logo img { height:64px; width:auto;  }
+    .logo img { height:64px; width:auto; transition:transform 0.3s ease; } .logo img:hover { transform:scale(1.08); filter:drop-shadow(0 0 8px rgba(255,255,255,0.6)); }
     .logo-text { font-family:'Playfair Display',serif; font-size:22px; font-weight:700; color:white; text-decoration:none; }
 
     .nav-links { list-style:none; display:flex; gap:4px; align-items:center; height:100%; }
@@ -223,9 +223,9 @@
     .image-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:48px; }
     .image-grid-item { border-radius:18px; overflow:hidden; aspect-ratio:4/3; position:relative; }
     .image-grid-item img { width:100%; height:100%; object-fit:cover; transition:transform 0.7s; display:block; }
-    .image-grid-item:hover img { transform:scale(1.08); }
-    .image-grid-item .img-label { position:absolute; bottom:0; left:0; right:0; padding:14px 18px; background:linear-gradient(to top, rgba(0,0,0,0.65), transparent); color:white; font-size:13px; font-weight:500; opacity:0; transition:opacity 0.3s; }
-    .image-grid-item:hover .img-label { opacity:1; }
+    .image-grid-item:hover img { transform:none; }
+    .image-grid-item .img-label { position:absolute; bottom:0; left:0; right:0; padding:14px 18px; background:linear-gradient(to top, rgba(0,0,0,0.65), transparent); color:white; font-size:13px; font-weight:500; opacity:0; transition:opacity 0.3s; display:none; }
+    .image-grid-item:hover .img-label { opacity:0; }
 
     .testimonials { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; margin-top:48px; }
     .testimonial { background:#f7f7f5; border-radius:20px; padding:36px 32px; position:relative; }
@@ -367,7 +367,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Basan Homes. All rights reserved. Serving Melbourne's West.</p>
+      <p>&copy; 2026 Basan Homes. All rights reserved. Serving Melbourne's West.</p>
       <p><a href="tel:+61424270036">+61 424 270 036</a> · <a href="mailto:operations@basanhomes.com.au">operations@basanhomes.com.au</a></p>
     </div>
   </footer>
@@ -602,6 +602,10 @@
     // s0.parentNode.insertBefore(s1,s0); })();
   </script>
 
+  <div class="icon">🔨</div></div>
+
+  <div class="sp-icon">🔨</div></div>
+
   <!-- MOBILE STICKY CTA -->
   <div id="mobile-cta">
     <a href="/contact">📞 Get a Free Quote — Call +61 424 270 036</a>
@@ -624,19 +628,60 @@
       document.getElementById('lightbox').classList.remove('open');
       document.body.style.overflow = '';
     }
+    // Lightbox disabled
     document.querySelectorAll('.image-grid-item img').forEach(img => {
-      img.style.cursor = 'pointer';
-      img.addEventListener('click', (e) => {
-        e.stopPropagation();
-        openLightbox(img.src);
-      });
+      img.style.cursor = 'default';
+      img.style.pointerEvents = 'none';
     });
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeLightbox();
     });
   </script>
 
+
+<div id="scroll-indicator" style="position:fixed;right:12px;top:50%;z-index:9999;font-size:26px;pointer-events:none;transition:top 0.1s;filter:none;">🏠</div>
+<script>
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('scroll-indicator');
+  if (!el) return;
+  const scrolled = window.scrollY;
+  const total = document.body.scrollHeight - window.innerHeight;
+  const percent = scrolled / total;
+  el.style.top = (10 + percent * 80) + '%';
+  el.textContent = percent > 0.5 ? '🔨' : '🏠';
+});
+</script>
 </body>
 </html>
 <!-- This will be replaced, just checking append works -->
 <!-- This will be replaced, just checking append works -->
+<script>
+  window.addEventListener('scroll', () => {
+    const icons = document.querySelectorAll('.sp-icon');
+    if (window.scrollY > 100) {
+      icons.forEach(i => i.classList.add('visible'));
+    } else {
+      icons.forEach(i => i.classList.remove('visible'));
+    }
+  });
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    const indicator = document.getElementById('scroll-indicator');
+    if (!indicator) return;
+    const scrolled = window.scrollY;
+    const total = document.body.scrollHeight - window.innerHeight;
+    const percent = scrolled / total;
+    
+    // Move icon along right side
+    const topPos = 10 + (percent * 80);
+    indicator.style.top = topPos + '%';
+    
+    // Switch icon at halfway
+    if (percent > 0.5) {
+      indicator.textContent = '🔨';
+    } else {
+      indicator.textContent = '🏠';
+    }
+  });
+</script>
