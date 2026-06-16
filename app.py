@@ -1,4 +1,5 @@
 import threading
+import os
 from flask import Flask, render_template, request
 from flask_mail import Mail, Message
 
@@ -9,7 +10,7 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'basanhomes@gmail.com'
-app.config['MAIL_PASSWORD'] = 'YOUR_APP_PASSWORD'
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD', 'folkirdbbkwzpsqw')
 app.config['MAIL_DEFAULT_SENDER'] = 'basanhomes@gmail.com'
 
 mail = Mail(app)
