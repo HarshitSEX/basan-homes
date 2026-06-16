@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-hero">
+  <div class="page-hero-img" style="background-image:url('/static/images/house6.webp');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="hero-badge">🔧 Property Maintenance</div>
+    <h1>One Number,<br><em>Every Repair Handled</em></h1>
+    <p>Fast, reliable property maintenance across Melbourne's West. Plumbing, electrical, painting, repairs and more — no job too small.</p>
+    <a href="/contact" class="btn-white">Get a Free Quote →</a>
+  </div>
+</div>
+
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item reveal"><span>⚡</span><span>24hr Response Guaranteed</span></div>
+    <div class="trust-item reveal reveal-delay-1"><span>✅</span><span>Licensed & Insured</span></div>
+    <div class="trust-item reveal reveal-delay-2"><span>💰</span><span>Fair Upfront Pricing</span></div>
+    <div class="trust-item reveal reveal-delay-3"><span>📍</span><span>All Melbourne's West</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <span class="section-label reveal">Our Maintenance Services</span>
+  <h2 class="reveal reveal-delay-1">Everything We Fix &<br><em>Keep Running</em></h2>
+  <p class="section-desc reveal reveal-delay-2">From emergency repairs to scheduled property maintenance — our tradespeople are fast, reliable and always upfront about pricing.</p>
+  <div class="cards">
+    <div class="card reveal reveal-delay-1"><span class="card-icon">🛠️</span><h3>General Repairs</h3><p>Doors, windows, walls, floors, fences — if it's broken we fix it fast and properly.</p><br><a href="/maintenance/repairs" class="btn-outline">Learn More →</a></div>
+    <div class="card reveal reveal-delay-2"><span class="card-icon">🚿</span><h3>Plumbing</h3><p>Leaks, blocked drains, hot water systems and burst pipes — our plumbers respond fast.</p><br><a href="/maintenance/plumbing" class="btn-outline">Learn More →</a></div>
+    <div class="card reveal reveal-delay-3"><span class="card-icon">⚡</span><h3>Electrical</h3><p>Safety switches, power points, lighting and switchboard upgrades done safely.</p><br><a href="/maintenance/electrical" class="btn-outline">Learn More →</a></div>
+    <div class="card reveal reveal-delay-4"><span class="card-icon">🎨</span><h3>Painting & Plastering</h3><p>Interior and exterior painting, feature walls and ceiling repairs to a flawless finish.</p><br><a href="/maintenance/painting" class="btn-outline">Learn More →</a></div>
+    <div class="card reveal reveal-delay-1"><span class="card-icon">🌿</span><h3>Garden & Outdoor</h3><p>Garden maintenance, fencing, decking and concrete — keeping your property sharp.</p><br><a href="/maintenance/garden" class="btn-outline">Learn More →</a></div>
+    <div class="card reveal reveal-delay-2"><span class="card-icon">📋</span><h3>Condition Reports</h3><p>Detailed written reports with photos for landlords and property managers.</p><br><a href="/maintenance/condition-reports" class="btn-outline">Learn More →</a></div>
+  </div>
+</div>
+
+<div class="green-strip">
+  <h2 class="reveal">Need Something Fixed <em>Fast?</em></h2>
+  <p class="reveal reveal-delay-1">Call us today for a free quote. We respond within 24 hours across all of Melbourne's West.</p>
+  <a href="/contact" class="btn-white reveal reveal-delay-2">Get a Free Quote →</a>
+</div>
+{% endblock %}

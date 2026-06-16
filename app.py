@@ -100,7 +100,7 @@ def dual():
 
 @app.route("/maintenance")
 def maintenance():
-    return render_template("maintenance.html")
+    return render_template("maintenance-services.html")
 
 @app.route("/maintenance/repairs")
 def repairs():
