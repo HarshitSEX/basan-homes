@@ -1,282 +1,152 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="page-hero" style="height:70vh;">
+<!-- HERO -->
+<div class="page-hero" style="height:45vh;">
   <div class="page-hero-img" style="background-image:url('/static/images/house1.webp');"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
     <div class="hero-badge">🏠 About Basan Homes</div>
     <h1>Who We Are &<br><em>What We Stand For</em></h1>
-    <p>A local Melbourne West business built on trust, quality and a genuine passion for building great homes and keeping them in perfect condition.</p>
-    <a href="/contact" class="btn-white">Get in Touch →</a>
   </div>
 </div>
 
-<!-- WHO WE ARE -->
-<div class="section">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
-    <div>
-      <span class="section-label reveal">Our Story</span>
-      <h2 style=')"font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:700;line-height:1.1;margin-bottom:20px;" class="reveal reveal-delay-1">Built From the Ground Up, <em style="color:#4d8c2f;font-style:italic;">Just Like Your Home</em></h2>
-      <p style="font-size:16px;color:#666;line-height:1.9;margin-bottom:16px;font-weight:300;" class="reveal reveal-delay-2">Basan Homes started with a simple belief — that every family in Melbourne's West deserves a home they're truly proud of, built and maintained by people they can actually trust. We're not a big corporate builder. We're a local team that lives and works in the same streets as our clients.</p>
-      <p style="font-size:16px;color:#666;line-height:1.9;margin-bottom:16px;font-weight:300;" class="reveal reveal-delay-2">From our very first project to the hundreds we've completed since, that belief has never changed. Every job — whether it's a brand new home or a leaking tap — gets the same level of care, attention and professionalism.</p>
-      <p style="font-size:16px;color:#666;line-height:1.9;font-weight:300;" class="reveal reveal-delay-3">We're proud to be Melbourne West's trusted name in construction and maintenance. And we're just getting started.</p>
+<!-- CONTACT DETAILS FIRST -->
+<div style="background:#1a1a1a;padding:40px 48px;">
+  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;align-items:center;">
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div style="background:#4d8c2f;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">📞</div>
+      <div>
+        <div style="color:#aaa;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Call Us</div>
+        <a href="tel:+61424270036" style="color:white;text-decoration:none;font-size:15px;font-weight:700;">+61 424 270 036</a>
+      </div>
     </div>
-    <div class="reveal reveal-delay-2">
-      <img src="/static/images/house2.webp" alt="Basan Homes team Melbourne West" style="width:100%;height:460px;object-fit:cover;border-radius:24px;box-shadow:0 32px 80px rgba(0,0,0,0.12);">
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div style="background:#4d8c2f;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">✉️</div>
+      <div>
+        <div style="color:#aaa;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Email Us</div>
+        <a href="mailto:basanhomes@gmail.com" style="color:white;text-decoration:none;font-size:15px;font-weight:700;">basanhomes@gmail.com</a>
+      </div>
     </div>
-  </div>
-</div>
-
-<!-- OUR MISSION -->
-<div style="background:#f7f7f5;padding:110px 48px;">
-  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
-    <div class="reveal reveal-delay-1">
-      <img src="/static/images/house1.webp" alt="Basan Homes mission" style="width:100%;height:460px;object-fit:cover;border-radius:24px;box-shadow:0 32px 80px rgba(0,0,0,0.12);">
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div style="background:#4d8c2f;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">📍</div>
+      <div>
+        <div style="color:#aaa;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Location</div>
+        <span style="color:white;font-size:15px;font-weight:700;">Melbourne's West, VIC</span>
+      </div>
     </div>
-    <div>
-      <span class="section-label reveal">Our Mission</span>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:700;line-height:1.1;margin-bottom:20px;" class="reveal reveal-delay-1">To Build Dreams, <em style="color:#4d8c2f;font-style:italic;">Above Standards</em></h2>
-      <p style="font-size:16px;color:#666;line-height:1.9;margin-bottom:16px;font-weight:300;" class="reveal reveal-delay-2">Our mission is straightforward — to deliver construction and maintenance services that exceed what our clients expect, every single time. Not just meeting the standard. Going above it.</p>
-      <p style="font-size:16px;color:#666;line-height:1.9;font-weight:300;" class="reveal reveal-delay-2">We do that by showing up on time, communicating clearly, pricing fairly and never cutting corners. When you work with Basan Homes, you get a team that treats your property with the same pride and respect as if it were their own.</p>
-    </div>
-  </div>
-</div>
-
-<!-- WHAT WE DO — CONSTRUCTION -->
-<div class="section">
-  <span class="section-label reveal">What We Do</span>
-  <h2 class="reveal reveal-delay-1">Construction Services<br><em>We're Known For</em></h2>
-  <p class="section-desc reveal reveal-delay-2">From the first brick to the final coat of paint — here's what we build for families and businesses across Melbourne's West.</p>
-
-  <!-- New Homes -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px;">
-    <div class="reveal reveal-delay-1">
-      <img src="/static/images/house3.webp" alt="New home builds Melbourne West" style="width:100%;height:360px;object-fit:cover;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,0.1);">
-    </div>
-    <div class="reveal reveal-delay-2">
-      <div style="font-size:40px;margin-bottom:16px;">🏠</div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;margin-bottom:14px;">New Home Builds</h3>
-      <p style="font-size:15px;color:#666;line-height:1.85;font-weight:300;margin-bottom:20px;">We build custom homes from the ground up — managing everything from council permits and site preparation through to landscaping and key handover. Your vision, our expertise, one seamless process.</p>
-      <a href="/construction/new-homes" class="btn-outline">Learn More →</a>
-    </div>
-  </div>
-
-  <!-- Renovations -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px;">
-    <div class="reveal reveal-delay-1">
-      <div style="font-size:40px;margin-bottom:16px;">🔨</div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;margin-bottom:14px;">Renovations</h3>
-      <p style="font-size:15px;color:#666;line-height:1.85;font-weight:300;margin-bottom:20px;">Kitchens, bathrooms, living areas and full home renovations that modernise your space and significantly increase your property's value. We work efficiently and communicate every step of the way.</p>
-      <a href="/construction/renovations" class="btn-outline">Learn More →</a>
-    </div>
-    <div class="reveal reveal-delay-2">
-      <img src="/static/images/house5.webp" alt="Kitchen renovation Melbourne" style="width:100%;height:360px;object-fit:cover;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,0.1);">
-    </div>
-  </div>
-
-  <!-- Extensions -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px;">
-    <div class="reveal reveal-delay-1">
-      <img src="/static/images/house6.webp" alt="Home extensions Melbourne West" style="width:100%;height:360px;object-fit:cover;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,0.1);">
-    </div>
-    <div class="reveal reveal-delay-2">
-      <div style="font-size:40px;margin-bottom:16px;">📐</div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;margin-bottom:14px;">Extensions & Additions</h3>
-      <p style="font-size:15px;color:#666;line-height:1.85;font-weight:300;margin-bottom:20px;">Ground floor extensions, second storey additions, alfresco areas and granny flats — all designed to seamlessly integrate with your existing home. More space, without the stress of moving.</p>
-      <a href="/construction/extensions" class="btn-outline">Learn More →</a>
-    </div>
-  </div>
-
-  <!-- Commercial -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px;">
-    <div class="reveal reveal-delay-1">
-      <div style="font-size:40px;margin-bottom:16px;">🏢</div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;margin-bottom:14px;">Commercial Construction</h3>
-      <p style="font-size:15px;color:#666;line-height:1.85;font-weight:300;margin-bottom:20px;">Office fit-outs, retail construction, warehouses and full commercial developments across Melbourne's West. We deliver commercial spaces that work — functional, well-built and completed on schedule.</p>
-      <a href="/construction/commercial" class="btn-outline">Learn More →</a>
-    </div>
-    <div class="reveal reveal-delay-2">
-      <img src="/static/images/house7.webp" alt="Commercial construction Melbourne" style="width:100%;height:360px;object-fit:cover;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,0.1);">
-    </div>
-  </div>
-
-  <!-- Knockdown Rebuild -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px;">
-    <div class="reveal reveal-delay-1">
-      <img src="/static/images/house10.webp" alt="Knockdown rebuild Melbourne West" style="width:100%;height:360px;object-fit:cover;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,0.1);">
-    </div>
-    <div class="reveal reveal-delay-2">
-      <div style="font-size:40px;margin-bottom:16px;">🧱</div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;margin-bottom:14px;">Knockdown & Rebuild</h3>
-      <p style="font-size:15px;color:#666;line-height:1.85;font-weight:300;margin-bottom:20px;">Love your street but not your house? We knock down the old and build the new — right on your existing block. Same location, brand new home. We handle the full process from demolition through to final handover.</p>
-      <a href="/construction/knockdown-rebuild" class="btn-outline">Learn More →</a>
-    </div>
-  </div>
-
-  <!-- Dual Occupancy -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
-    <div class="reveal reveal-delay-1">
-      <div style="font-size:40px;margin-bottom:16px;">🏡</div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;margin-bottom:14px;">Dual Occupancy</h3>
-      <p style="font-size:15px;color:#666;line-height:1.85;font-weight:300;margin-bottom:20px;">Build two homes on one block and dramatically increase your property's value. Live in one, rent the other — or sell both. We manage town planning, design and full construction from start to finish.</p>
-      <a href="/construction/dual-occupancy" class="btn-outline">Learn More →</a>
-    </div>
-    <div class="reveal reveal-delay-2">
-      <img src="/static/images/house2.webp" alt="Dual occupancy Melbourne West" style="width:100%;height:360px;object-fit:cover;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,0.1);">
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div style="background:#4d8c2f;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">⏰</div>
+      <div>
+        <div style="color:#aaa;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Working Hours</div>
+        <span style="color:white;font-size:15px;font-weight:700;">Mon–Sat: 7am – 6pm</span>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- WHAT WE DO — MAINTENANCE -->
-<div style="background:#f7f7f5;padding:110px 48px;">
+<!-- WHO WE ARE — COMPACT -->
+<div style="padding:72px 48px;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+  <div>
+    <div style="display:inline-block;background:#f0f7eb;color:#4d8c2f;padding:5px 14px;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">Our Story</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,42px);font-weight:700;line-height:1.1;margin-bottom:24px;">Built From the Ground Up, <em style="color:#4d8c2f;">Just Like Your Home</em></h2>
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="background:#4d8c2f;color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🤝</div>
+        <p style="font-size:14px;color:#555;line-height:1.7;margin:0;"><strong>Local & Trusted</strong> — A Melbourne West business built on trust, serving the same streets as our clients.</p>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="background:#4d8c2f;color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🏗️</div>
+        <p style="font-size:14px;color:#555;line-height:1.7;margin:0;"><strong>500+ Projects</strong> — From our very first project to hundreds completed, every job gets the same care and professionalism.</p>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="background:#4d8c2f;color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">⭐</div>
+        <p style="font-size:14px;color:#555;line-height:1.7;margin:0;"><strong>Above Standards</strong> — We never cut corners. On time, on budget and always upfront about pricing.</p>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="background:#4d8c2f;color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">❤️</div>
+        <p style="font-size:14px;color:#555;line-height:1.7;margin:0;"><strong>Community First</strong> — We care about this community. That's why so many clients come back and refer their friends.</p>
+      </div>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="/contact" style="display:inline-block;background:#4d8c2f;color:white;padding:14px 32px;font-weight:700;text-decoration:none;font-size:14px;text-transform:uppercase;">GET A FREE QUOTE →</a>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+    <img src="/static/images/house1.webp" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+    <img src="/static/images/house2.webp" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-top:24px;">
+    <img src="/static/images/house3.webp" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+    <img src="/static/images/house4.webp" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-top:24px;">
+  </div>
+</div>
+
+<!-- OUR VALUES — COMPACT ROW -->
+<div style="background:#f7f7f5;padding:56px 48px;">
   <div style="max-width:1280px;margin:0 auto;">
-    <span class="section-label reveal">Maintenance Services</span>
-    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:700;line-height:1.1;margin-bottom:16px;" class="reveal reveal-delay-1">Everything We Fix &<br><em style="color:#4d8c2f;">Keep Running</em></h2>
-    <p style="font-size:16px;color:#666;line-height:1.9;max-width:600px;margin-bottom:72px;font-weight:300;" class="reveal reveal-delay-2">From urgent repairs to scheduled property maintenance — our tradespeople are fast, reliable and always upfront about pricing.</p>
-
-    <!-- Repairs -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px;">
-      <div class="reveal reveal-delay-1">
-        <img src="/static/images/house8.webp" alt="General repairs Melbourne" style="width:100%;height:360px;object-fit:cover;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,0.1);">
-      </div>
-      <div class="reveal reveal-delay-2">
-        <div style="font-size:40px;margin-bottom:16px;">🔧</div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;margin-bottom:14px;">General Repairs</h3>
-        <p style="font-size:15px;color:#666;line-height:1.85;font-weight:300;margin-bottom:20px;">Doors, windows, walls, floors, fences — if it's broken we fix it fast and properly. We handle all general property repairs for homeowners, landlords and property managers across Melbourne's West.</p>
-        <a href="/maintenance/repairs" class="btn-outline">Learn More →</a>
-      </div>
+    <div style="text-align:center;margin-bottom:40px;">
+      <div style="display:inline-block;background:#4d8c2f;color:white;padding:5px 14px;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;">Our Values</div>
+      <h2 style="font-size:clamp(24px,3vw,38px);font-weight:800;text-transform:uppercase;">WHAT WE BELIEVE IN, <span style="color:#4d8c2f;">EVERY SINGLE DAY</span></h2>
     </div>
-
-    <!-- Plumbing -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px;">
-      <div class="reveal reveal-delay-1">
-        <div style="font-size:40px;margin-bottom:16px;">🚿</div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;margin-bottom:14px;">Plumbing</h3>
-        <p style="font-size:15px;color:#666;line-height:1.85;font-weight:300;margin-bottom:20px;">Leaks, blocked drains, hot water systems and burst pipes — our plumbers respond fast and fix it right. We service homes and investment properties across all of Melbourne's West suburbs.</p>
-        <a href="/maintenance/plumbing" class="btn-outline">Learn More →</a>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+      <div style="background:white;padding:28px 20px;border-top:3px solid #4d8c2f;text-align:center;">
+        <div style="font-size:32px;margin-bottom:12px;">🤝</div>
+        <h3 style="font-size:16px;font-weight:800;text-transform:uppercase;margin-bottom:8px;">Honesty</h3>
+        <p style="font-size:13px;color:#666;line-height:1.7;">No surprises, no upselling. We tell you exactly what needs doing and what it costs.</p>
       </div>
-      <div class="reveal reveal-delay-2">
-        <img src="/static/images/house9.webp" alt="Plumbing services Melbourne West" style="width:100%;height:360px;object-fit:cover;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,0.1);">
+      <div style="background:white;padding:28px 20px;border-top:3px solid #4d8c2f;text-align:center;">
+        <div style="font-size:32px;margin-bottom:12px;">⭐</div>
+        <h3 style="font-size:16px;font-weight:800;text-transform:uppercase;margin-bottom:8px;">Quality</h3>
+        <p style="font-size:13px;color:#666;line-height:1.7;">Every job done to the highest standard — whether a new home or a simple repair.</p>
       </div>
-    </div>
-
-    <!-- Electrical -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px;">
-      <div class="reveal reveal-delay-1">
-        <img src="/static/images/house10.webp" alt="Electrical services Melbourne" style="width:100%;height:360px;object-fit:cover;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,0.1);">
+      <div style="background:white;padding:28px 20px;border-top:3px solid #4d8c2f;text-align:center;">
+        <div style="font-size:32px;margin-bottom:12px;">⏰</div>
+        <h3 style="font-size:16px;font-weight:800;text-transform:uppercase;margin-bottom:8px;">Reliability</h3>
+        <p style="font-size:13px;color:#666;line-height:1.7;">We show up when we say, finish when we say and keep you informed every step.</p>
       </div>
-      <div class="reveal reveal-delay-2">
-        <div style="font-size:40px;margin-bottom:16px;">⚡</div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;margin-bottom:14px;">Electrical</h3>
-        <p style="font-size:15px;color:#666;line-height:1.85;font-weight:300;margin-bottom:20px;">Safety switches, power points, lighting, switchboard upgrades and solar systems. Our electricians carry out all work safely and professionally, providing certificates of compliance on every job.</p>
-        <a href="/maintenance/electrical" class="btn-outline">Learn More →</a>
-      </div>
-    </div>
-
-    <!-- Painting -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px;">
-      <div class="reveal reveal-delay-1">
-        <div style="font-size:40px;margin-bottom:16px;">🎨</div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;margin-bottom:14px;">Painting & Plastering</h3>
-        <p style="font-size:15px;color:#666;line-height:1.85;font-weight:300;margin-bottom:20px;">Interior and exterior painting, feature walls, ceiling repairs and plastering — all delivered to a flawless finish. One of the most cost-effective ways to completely transform a property.</p>
-        <a href="/maintenance/painting" class="btn-outline">Learn More →</a>
-      </div>
-      <div class="reveal reveal-delay-2">
-        <img src="/static/images/house1.webp" alt="Painting services Melbourne West" style="width:100%;height:360px;object-fit:cover;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,0.1);">
-      </div>
-    </div>
-
-    <!-- Garden -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px;">
-      <div class="reveal reveal-delay-1">
-        <img src="/static/images/house4.webp" alt="Garden maintenance Melbourne" style="width:100%;height:360px;object-fit:cover;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,0.1);">
-      </div>
-      <div class="reveal reveal-delay-2">
-        <div style="font-size:40px;margin-bottom:16px;">🌿</div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;margin-bottom:14px;">Garden & Outdoor</h3>
-        <p style="font-size:15px;color:#666;line-height:1.85;font-weight:300;margin-bottom:20px;">Garden maintenance, fencing, decking, concrete paths and outdoor area upkeep — keeping your property looking sharp inside and out, year round. Regular scheduled plans available.</p>
-        <a href="/maintenance/garden" class="btn-outline">Learn More →</a>
-      </div>
-    </div>
-
-    <!-- Condition Reports -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
-      <div class="reveal reveal-delay-1">
-        <div style="font-size:40px;margin-bottom:16px;">📋</div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;margin-bottom:14px;">Property Condition Reports</h3>
-        <p style="font-size:15px;color:#666;line-height:1.85;font-weight:300;margin-bottom:20px;">Comprehensive written reports with timestamped photos for landlords, property managers and real estate agencies. Know exactly what your property needs. PDF delivered within 48 hours.</p>
-        <a href="/maintenance/condition-reports" class="btn-outline">Learn More →</a>
-      </div>
-      <div class="reveal reveal-delay-2">
-        <img src="/static/images/house2.webp" alt="Property condition report Melbourne" style="width:100%;height:360px;object-fit:cover;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,0.1);">
+      <div style="background:white;padding:28px 20px;border-top:3px solid #4d8c2f;text-align:center;">
+        <div style="font-size:32px;margin-bottom:12px;">❤️</div>
+        <h3 style="font-size:16px;font-weight:800;text-transform:uppercase;margin-bottom:8px;">Community</h3>
+        <p style="font-size:13px;color:#666;line-height:1.7;">We're locals. We care about this community and the families we serve.</p>
       </div>
     </div>
   </div>
 </div>
-
-<!-- OUR VALUES -->
-<div class="section">
-  <span class="section-label reveal">Our Values</span>
-  <h2 class="reveal reveal-delay-1">What We Believe In,<br><em>Every Single Day</em></h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:48px;">
-    <div style="background:#f7f7f5;border-radius:20px;padding:40px 28px;border-bottom:3px solid #4d8c2f;" class="reveal reveal-delay-1">
-      <div style="font-size:40px;margin-bottom:16px;">🤝</div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:12px;">Honesty</h3>
-      <p style="font-size:14px;color:#666;line-height:1.8;font-weight:300;">We tell you exactly what needs to be done, what it costs and how long it takes. No surprises, no upselling, no runaround.</p>
-    </div>
-    <div style="background:#f7f7f5;border-radius:20px;padding:40px 28px;border-bottom:3px solid #4d8c2f;" class="reveal reveal-delay-2">
-      <div style="font-size:40px;margin-bottom:16px;">⭐</div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:12px;">Quality</h3>
-      <p style="font-size:14px;color:#666;line-height:1.8;font-weight:300;">We never cut corners. Every job is done to the highest standard — whether it's a brand new home or a simple repair.</p>
-    </div>
-    <div style="background:#f7f7f5;border-radius:20px;padding:40px 28px;border-bottom:3px solid #4d8c2f;" class="reveal reveal-delay-3">
-      <div style="font-size:40px;margin-bottom:16px;">⏰</div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:12px;">Reliability</h3>
-      <p style="font-size:14px;color:#666;line-height:1.8;font-weight:300;">We show up when we say we will, finish when we say we will and keep you informed every step of the way.</p>
-    </div>
-    <div style="background:#f7f7f5;border-radius:20px;padding:40px 28px;border-bottom:3px solid #4d8c2f;" class="reveal reveal-delay-4">
-      <div style="font-size:40px;margin-bottom:16px;">❤️</div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:12px;">Community</h3>
-      <p style="font-size:14px;color:#666;line-height:1.8;font-weight:300;">We're locals. We care about this community and the families we serve. That's why so many of our clients come back — and refer their friends.</p>
-    </div>
-  </div>
-</div>
-
 
 <!-- SERVICE PROVIDERS -->
-<div class="section">
-  <span class="section-label reveal">Our Partners</span>
-  <h2 class="reveal reveal-delay-1">Trusted Service<br><em>Providers We Use</em></h2>
-  <p class="section-desc reveal reveal-delay-2">We work with industry-leading platforms and suppliers to deliver the best outcomes for our clients.</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:32px;align-items:center;margin-top:48px;">
-    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:32px 20px;background:#f7f7f5;border-radius:20px;" class="reveal reveal-delay-1">
-      <img src="/static/images/aroflo.png" alt="Aroflo" style="height:48px;object-fit:contain;">
-      <span style="font-size:14px;font-weight:600;color:#333;">Aroflo</span>
+<div style="padding:56px 48px;max-width:1280px;margin:0 auto;">
+  <div style="text-align:center;margin-bottom:40px;">
+    <div style="display:inline-block;background:#f0f7eb;color:#4d8c2f;padding:5px 14px;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;">Our Partners</div>
+    <h2 style="font-size:clamp(24px,3vw,38px);font-weight:800;text-transform:uppercase;">TRUSTED SERVICE <span style="color:#4d8c2f;">PROVIDERS WE USE</span></h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;">
+    <div style="background:#f7f7f5;padding:24px 16px;text-align:center;border-radius:8px;">
+      <img src="/static/images/aroflo.png" alt="Aroflo" style="height:48px;object-fit:contain;margin-bottom:10px;">
+      <div style="font-size:13px;font-weight:700;color:#333;">Aroflo</div>
     </div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:32px 20px;background:#f7f7f5;border-radius:20px;" class="reveal reveal-delay-2">
-      <img src="/static/images/xero.png" alt="Xero" style="height:48px;object-fit:contain;">
-      <span style="font-size:14px;font-weight:600;color:#333;">Xero</span>
+    <div style="background:#f7f7f5;padding:24px 16px;text-align:center;border-radius:8px;">
+      <img src="/static/images/xero.png" alt="Xero" style="height:48px;object-fit:contain;margin-bottom:10px;">
+      <div style="font-size:13px;font-weight:700;color:#333;">Xero</div>
     </div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:32px 20px;background:#f7f7f5;border-radius:20px;" class="reveal reveal-delay-3">
-      <img src="/static/images/vodafone.png" alt="Vodafone" style="height:48px;object-fit:contain;">
-      <span style="font-size:14px;font-weight:600;color:#333;">Vodafone</span>
+    <div style="background:#f7f7f5;padding:24px 16px;text-align:center;border-radius:8px;">
+      <img src="/static/images/vodafone.png" alt="Vodafone" style="height:48px;object-fit:contain;margin-bottom:10px;">
+      <div style="font-size:13px;font-weight:700;color:#333;">Vodafone</div>
     </div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:32px 20px;background:#f7f7f5;border-radius:20px;" class="reveal reveal-delay-4">
-      <img src="/static/images/commbank.png" alt="CommBank" style="height:48px;object-fit:contain;">
-      <span style="font-size:14px;font-weight:600;color:#333;">CommBank</span>
+    <div style="background:#f7f7f5;padding:24px 16px;text-align:center;border-radius:8px;">
+      <img src="/static/images/commbank.png" alt="CommBank" style="height:48px;object-fit:contain;margin-bottom:10px;">
+      <div style="font-size:13px;font-weight:700;color:#333;">CommBank</div>
     </div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:32px 20px;background:#f7f7f5;border-radius:20px;" class="reveal reveal-delay-5">
-      <img src="/static/images/bunnings.png" alt="Bunnings" style="height:48px;object-fit:contain;">
-      <span style="font-size:14px;font-weight:600;color:#333;">Bunnings</span>
+    <div style="background:#f7f7f5;padding:24px 16px;text-align:center;border-radius:8px;">
+      <img src="/static/images/bunnings.png" alt="Bunnings" style="height:48px;object-fit:contain;margin-bottom:10px;">
+      <div style="font-size:13px;font-weight:700;color:#333;">Bunnings</div>
     </div>
   </div>
 </div>
 
-<div class="green-strip">
-  <h2 class="reveal">Ready to Work With <em>Our Team?</em></h2>
-  <p class="reveal reveal-delay-1">Get in touch today for a free no-obligation quote. We'd love to help with your next project.</p>
-  <a href="/contact" class="btn-white reveal reveal-delay-2">Get a Free Quote →</a>
+<!-- CTA -->
+<div style="background:#4d8c2f;padding:64px 48px;text-align:center;">
+  <h2 style="font-size:clamp(24px,3.5vw,44px);font-weight:800;color:white;text-transform:uppercase;margin-bottom:12px;">READY TO WORK WITH <span style="color:#d4edbc;">OUR TEAM?</span></h2>
+  <p style="color:rgba(255,255,255,0.85);font-size:15px;margin-bottom:28px;">Get in touch today for a free no-obligation quote.</p>
+  <a href="/contact" style="display:inline-block;background:white;color:#4d8c2f;padding:16px 40px;font-weight:800;text-decoration:none;font-size:14px;text-transform:uppercase;">GET A FREE QUOTE →</a>
 </div>
 
 {% endblock %}
