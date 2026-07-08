@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- HERO -->
+<!-- HERO VIDEO -->
 <div style="position:relative;height:90vh;overflow:hidden;margin-top:0;">
-  <img src="/static/images/house8.webp" style="width:100%;height:100%;object-fit:cover;display:block;object-position:center top;">
-  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.1) 60%);"></div>
+  <video autoplay muted loop playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;filter:blur(2px) brightness(0.75);transform:scale(1.05);">
+    <source src="/static/hero-video.mp4" type="video/mp4">
+  </video>
+  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.2) 100%);"></div>
   <div style="position:absolute;top:50%;left:8%;transform:translateY(-50%);">
     <p style="color:rgba(255,255,255,0.85);font-size:14px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:16px;">Melbourne's Trusted Builder</p>
     <h1 style="font-family:'Playfair Display',serif;font-size:clamp(42px,6vw,80px);font-weight:700;color:white;line-height:1.05;margin-bottom:32px;">Love where<br>you live.</h1>
