@@ -9,9 +9,9 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'basanhomes@gmail.com'
+app.config['MAIL_USERNAME'] = 'operations@basanhomes.com.au'
 app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD', 'folkirfdbkwzpsqw')
-app.config['MAIL_DEFAULT_SENDER'] = 'basanhomes@gmail.com'
+app.config['MAIL_DEFAULT_SENDER'] = 'operations@basanhomes.com.au'
 
 mail = Mail(app)
 
@@ -200,7 +200,7 @@ def contact():
         try:
             msg = Message(
                 subject=f"New Enquiry from {name} — Basan Homes",
-                recipients=["basanhomes@gmail.com"],
+                recipients=["operations@basanhomes.com.au"],
                 body=f"""
 New enquiry from Basan Homes website:
 
