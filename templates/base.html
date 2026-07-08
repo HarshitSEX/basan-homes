@@ -291,48 +291,6 @@
       .contact-form-wrap { padding:32px 24px; }
     }
 
-    @media (max-width: 768px) {
-      /* NAVBAR */
-      .nav-container { padding:0 20px; height:64px; }
-      .nav-links { display:none; }
-      .logo img { height:40px; width:40px; }
-
-      /* HERO */
-      div[style*="height:90vh"] { height:60vh !important; }
-      div[style*="left:8%"] { left:5% !important; right:5% !important; }
-      div[style*="left:8%"] h1 { font-size:36px !important; }
-      div[style*="left:8%"] a { padding:12px 20px !important; font-size:12px !important; }
-
-      /* I WANT TO */
-      div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns:1fr 1fr !important; }
-
-      /* FEATURE SECTIONS */
-      div[style*="grid-template-columns:1fr 1fr;min-height:580px"] { grid-template-columns:1fr !important; min-height:auto !important; }
-      div[style*="padding:80px 72px"] { padding:40px 24px !important; }
-      div[style*="min-height:580px"] img { min-height:280px !important; height:280px !important; }
-
-      /* TRUST POINTS */
-      div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns:1fr 1fr !important; }
-
-      /* KITCHEN BATHROOM */
-      div[style*="grid-template-columns:1fr 1fr"]:not([style*="580px"]) { grid-template-columns:1fr !important; }
-
-      /* SERVICE CARDS */
-      div[style*="grid-template-columns:repeat(5,1fr)"] { grid-template-columns:1fr 1fr !important; }
-
-      /* SECTIONS */
-      div[style*="padding:80px 48px"] { padding:48px 20px !important; }
-      div[style*="padding:72px 48px"] { padding:48px 20px !important; }
-      div[style*="padding:100px 48px"] { padding:60px 20px !important; }
-
-      /* CTA BUTTONS */
-      div[style*="display:flex;gap:16px;justify-content:center"] { flex-direction:column !important; align-items:center !important; }
-
-      /* FOOTER */
-      .footer-grid { grid-template-columns:1fr !important; }
-      .footer-top { grid-template-columns:1fr !important; gap:32px !important; }
-    }
-
     /* MOBILE HAMBURGER */
     .hamburger {
       display:none;
@@ -340,32 +298,101 @@
       gap:5px;
       cursor:pointer;
       padding:8px;
+      z-index:1001;
     }
     .hamburger span {
-      width:24px;
+      width:26px;
       height:2px;
       background:#1a1a1a;
       display:block;
       transition:all 0.3s;
     }
+
     @media (max-width:768px) {
-      .hamburger { display:flex; }
+      .top-bar { display:none !important; }
+      .nav-container { padding:0 16px; height:64px; }
+      .nav-links { display:none !important; }
+      .hamburger { display:flex !important; }
+      .logo img { height:40px !important; width:40px !important; }
+
       .nav-links.open {
         display:flex !important;
         flex-direction:column;
-        position:absolute;
+        position:fixed;
         top:64px;
         left:0;
         right:0;
+        bottom:0;
         background:white;
-        padding:16px 0;
-        box-shadow:0 8px 24px rgba(0,0,0,0.1);
-        z-index:999;
-        height:auto;
+        overflow-y:auto;
+        z-index:1000;
+        padding-bottom:40px;
       }
-      .nav-links.open > li { height:auto; border-bottom:1px solid #f0f0f0; }
-      .nav-links.open > li > a { padding:14px 24px; }
-      .dropdown { position:static !important; opacity:1 !important; visibility:visible !important; transform:none !important; box-shadow:none !important; border-radius:0 !important; }
+      .nav-links.open > li {
+        height:auto !important;
+        border-bottom:1px solid #f0f0f0;
+        width:100%;
+      }
+      .nav-links.open > li > a {
+        padding:16px 24px !important;
+        font-size:15px !important;
+        width:100%;
+        display:block !important;
+      }
+      .dropdown {
+        position:static !important;
+        opacity:1 !important;
+        visibility:visible !important;
+        transform:none !important;
+        box-shadow:none !important;
+        border-radius:0 !important;
+        display:block !important;
+        background:#f7f7f5 !important;
+        padding:8px 0 !important;
+      }
+      .dropdown a {
+        padding:12px 32px !important;
+        font-size:13px !important;
+      }
+      .nav-cta {
+        margin:16px 24px !important;
+        text-align:center !important;
+        border-radius:4px !important;
+      }
+
+      /* HOMEPAGE */
+      div[style*="height:90vh"] { height:70vh !important; }
+      div[style*="left:8%"] { left:5% !important; right:5% !important; top:50% !important; transform:translateY(-50%) !important; }
+      div[style*="left:8%"] h1 { font-size:38px !important; }
+      div[style*="display:flex;gap:16px;flex-wrap:wrap"] { flex-direction:column !important; }
+
+      /* I WANT TO */
+      div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns:1fr 1fr !important; }
+
+      /* FEATURE SECTIONS */
+      div[style*="min-height:580px"] { grid-template-columns:1fr !important; min-height:auto !important; }
+      div[style*="padding:80px 72px"] { padding:36px 20px !important; }
+      div[style*="min-height:580px"] img { min-height:260px !important; height:260px !important; }
+
+      /* TRUST */
+      div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns:1fr 1fr !important; }
+
+      /* KITCHEN BATHROOM SPLIT */
+      div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns:1fr !important; }
+      div[style*="min-height:480px"] { min-height:300px !important; }
+
+      /* PARTNERS */
+      div[style*="grid-template-columns:repeat(5,1fr)"] { grid-template-columns:1fr 1fr !important; }
+
+      /* PADDING */
+      div[style*="padding:80px 48px"] { padding:40px 16px !important; }
+      div[style*="padding:72px 48px"] { padding:40px 16px !important; }
+      div[style*="padding:100px 48px"] { padding:56px 16px !important; }
+      div[style*="padding:56px 48px"] { padding:40px 16px !important; }
+
+      /* FOOTER */
+      .footer-top { grid-template-columns:1fr !important; gap:32px !important; }
+      .footer-bottom { flex-direction:column !important; gap:12px !important; text-align:center !important; }
     }
 
   </style>
@@ -380,7 +407,7 @@ window.addEventListener('pageshow', function(event) {
 <body>
   <div class="logo-watermark"></div>
 
-  <div style="background:#1a1a1a;padding:8px 48px;display:flex;justify-content:space-between;align-items:center;">
+  <div style="background:#1a1a1a;padding:8px 48px;display:flex;justify-content:space-between;align-items:center;" class="top-bar">
   <div style="display:flex;align-items:center;gap:24px;">
     <span style="color:#aaa;font-size:13px;">Melbourne's Trusted Builder & Maintenance Team</span>
   </div>
@@ -654,48 +681,6 @@ window.addEventListener('pageshow', function(event) {
     /* SMOOTH PAGE TRANSITION */
     body { transition: opacity 0.4s ease; }
 
-    @media (max-width: 768px) {
-      /* NAVBAR */
-      .nav-container { padding:0 20px; height:64px; }
-      .nav-links { display:none; }
-      .logo img { height:40px; width:40px; }
-
-      /* HERO */
-      div[style*="height:90vh"] { height:60vh !important; }
-      div[style*="left:8%"] { left:5% !important; right:5% !important; }
-      div[style*="left:8%"] h1 { font-size:36px !important; }
-      div[style*="left:8%"] a { padding:12px 20px !important; font-size:12px !important; }
-
-      /* I WANT TO */
-      div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns:1fr 1fr !important; }
-
-      /* FEATURE SECTIONS */
-      div[style*="grid-template-columns:1fr 1fr;min-height:580px"] { grid-template-columns:1fr !important; min-height:auto !important; }
-      div[style*="padding:80px 72px"] { padding:40px 24px !important; }
-      div[style*="min-height:580px"] img { min-height:280px !important; height:280px !important; }
-
-      /* TRUST POINTS */
-      div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns:1fr 1fr !important; }
-
-      /* KITCHEN BATHROOM */
-      div[style*="grid-template-columns:1fr 1fr"]:not([style*="580px"]) { grid-template-columns:1fr !important; }
-
-      /* SERVICE CARDS */
-      div[style*="grid-template-columns:repeat(5,1fr)"] { grid-template-columns:1fr 1fr !important; }
-
-      /* SECTIONS */
-      div[style*="padding:80px 48px"] { padding:48px 20px !important; }
-      div[style*="padding:72px 48px"] { padding:48px 20px !important; }
-      div[style*="padding:100px 48px"] { padding:60px 20px !important; }
-
-      /* CTA BUTTONS */
-      div[style*="display:flex;gap:16px;justify-content:center"] { flex-direction:column !important; align-items:center !important; }
-
-      /* FOOTER */
-      .footer-grid { grid-template-columns:1fr !important; }
-      .footer-top { grid-template-columns:1fr !important; gap:32px !important; }
-    }
-
     /* MOBILE HAMBURGER */
     .hamburger {
       display:none;
@@ -703,32 +688,101 @@ window.addEventListener('pageshow', function(event) {
       gap:5px;
       cursor:pointer;
       padding:8px;
+      z-index:1001;
     }
     .hamburger span {
-      width:24px;
+      width:26px;
       height:2px;
       background:#1a1a1a;
       display:block;
       transition:all 0.3s;
     }
+
     @media (max-width:768px) {
-      .hamburger { display:flex; }
+      .top-bar { display:none !important; }
+      .nav-container { padding:0 16px; height:64px; }
+      .nav-links { display:none !important; }
+      .hamburger { display:flex !important; }
+      .logo img { height:40px !important; width:40px !important; }
+
       .nav-links.open {
         display:flex !important;
         flex-direction:column;
-        position:absolute;
+        position:fixed;
         top:64px;
         left:0;
         right:0;
+        bottom:0;
         background:white;
-        padding:16px 0;
-        box-shadow:0 8px 24px rgba(0,0,0,0.1);
-        z-index:999;
-        height:auto;
+        overflow-y:auto;
+        z-index:1000;
+        padding-bottom:40px;
       }
-      .nav-links.open > li { height:auto; border-bottom:1px solid #f0f0f0; }
-      .nav-links.open > li > a { padding:14px 24px; }
-      .dropdown { position:static !important; opacity:1 !important; visibility:visible !important; transform:none !important; box-shadow:none !important; border-radius:0 !important; }
+      .nav-links.open > li {
+        height:auto !important;
+        border-bottom:1px solid #f0f0f0;
+        width:100%;
+      }
+      .nav-links.open > li > a {
+        padding:16px 24px !important;
+        font-size:15px !important;
+        width:100%;
+        display:block !important;
+      }
+      .dropdown {
+        position:static !important;
+        opacity:1 !important;
+        visibility:visible !important;
+        transform:none !important;
+        box-shadow:none !important;
+        border-radius:0 !important;
+        display:block !important;
+        background:#f7f7f5 !important;
+        padding:8px 0 !important;
+      }
+      .dropdown a {
+        padding:12px 32px !important;
+        font-size:13px !important;
+      }
+      .nav-cta {
+        margin:16px 24px !important;
+        text-align:center !important;
+        border-radius:4px !important;
+      }
+
+      /* HOMEPAGE */
+      div[style*="height:90vh"] { height:70vh !important; }
+      div[style*="left:8%"] { left:5% !important; right:5% !important; top:50% !important; transform:translateY(-50%) !important; }
+      div[style*="left:8%"] h1 { font-size:38px !important; }
+      div[style*="display:flex;gap:16px;flex-wrap:wrap"] { flex-direction:column !important; }
+
+      /* I WANT TO */
+      div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns:1fr 1fr !important; }
+
+      /* FEATURE SECTIONS */
+      div[style*="min-height:580px"] { grid-template-columns:1fr !important; min-height:auto !important; }
+      div[style*="padding:80px 72px"] { padding:36px 20px !important; }
+      div[style*="min-height:580px"] img { min-height:260px !important; height:260px !important; }
+
+      /* TRUST */
+      div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns:1fr 1fr !important; }
+
+      /* KITCHEN BATHROOM SPLIT */
+      div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns:1fr !important; }
+      div[style*="min-height:480px"] { min-height:300px !important; }
+
+      /* PARTNERS */
+      div[style*="grid-template-columns:repeat(5,1fr)"] { grid-template-columns:1fr 1fr !important; }
+
+      /* PADDING */
+      div[style*="padding:80px 48px"] { padding:40px 16px !important; }
+      div[style*="padding:72px 48px"] { padding:40px 16px !important; }
+      div[style*="padding:100px 48px"] { padding:56px 16px !important; }
+      div[style*="padding:56px 48px"] { padding:40px 16px !important; }
+
+      /* FOOTER */
+      .footer-top { grid-template-columns:1fr !important; gap:32px !important; }
+      .footer-bottom { flex-direction:column !important; gap:12px !important; text-align:center !important; }
     }
 
   </style>
@@ -743,48 +797,6 @@ window.addEventListener('pageshow', function(event) {
   <style>
     @keyframes spin { to { transform:rotate(360deg); } }
 
-    @media (max-width: 768px) {
-      /* NAVBAR */
-      .nav-container { padding:0 20px; height:64px; }
-      .nav-links { display:none; }
-      .logo img { height:40px; width:40px; }
-
-      /* HERO */
-      div[style*="height:90vh"] { height:60vh !important; }
-      div[style*="left:8%"] { left:5% !important; right:5% !important; }
-      div[style*="left:8%"] h1 { font-size:36px !important; }
-      div[style*="left:8%"] a { padding:12px 20px !important; font-size:12px !important; }
-
-      /* I WANT TO */
-      div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns:1fr 1fr !important; }
-
-      /* FEATURE SECTIONS */
-      div[style*="grid-template-columns:1fr 1fr;min-height:580px"] { grid-template-columns:1fr !important; min-height:auto !important; }
-      div[style*="padding:80px 72px"] { padding:40px 24px !important; }
-      div[style*="min-height:580px"] img { min-height:280px !important; height:280px !important; }
-
-      /* TRUST POINTS */
-      div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns:1fr 1fr !important; }
-
-      /* KITCHEN BATHROOM */
-      div[style*="grid-template-columns:1fr 1fr"]:not([style*="580px"]) { grid-template-columns:1fr !important; }
-
-      /* SERVICE CARDS */
-      div[style*="grid-template-columns:repeat(5,1fr)"] { grid-template-columns:1fr 1fr !important; }
-
-      /* SECTIONS */
-      div[style*="padding:80px 48px"] { padding:48px 20px !important; }
-      div[style*="padding:72px 48px"] { padding:48px 20px !important; }
-      div[style*="padding:100px 48px"] { padding:60px 20px !important; }
-
-      /* CTA BUTTONS */
-      div[style*="display:flex;gap:16px;justify-content:center"] { flex-direction:column !important; align-items:center !important; }
-
-      /* FOOTER */
-      .footer-grid { grid-template-columns:1fr !important; }
-      .footer-top { grid-template-columns:1fr !important; gap:32px !important; }
-    }
-
     /* MOBILE HAMBURGER */
     .hamburger {
       display:none;
@@ -792,32 +804,101 @@ window.addEventListener('pageshow', function(event) {
       gap:5px;
       cursor:pointer;
       padding:8px;
+      z-index:1001;
     }
     .hamburger span {
-      width:24px;
+      width:26px;
       height:2px;
       background:#1a1a1a;
       display:block;
       transition:all 0.3s;
     }
+
     @media (max-width:768px) {
-      .hamburger { display:flex; }
+      .top-bar { display:none !important; }
+      .nav-container { padding:0 16px; height:64px; }
+      .nav-links { display:none !important; }
+      .hamburger { display:flex !important; }
+      .logo img { height:40px !important; width:40px !important; }
+
       .nav-links.open {
         display:flex !important;
         flex-direction:column;
-        position:absolute;
+        position:fixed;
         top:64px;
         left:0;
         right:0;
+        bottom:0;
         background:white;
-        padding:16px 0;
-        box-shadow:0 8px 24px rgba(0,0,0,0.1);
-        z-index:999;
-        height:auto;
+        overflow-y:auto;
+        z-index:1000;
+        padding-bottom:40px;
       }
-      .nav-links.open > li { height:auto; border-bottom:1px solid #f0f0f0; }
-      .nav-links.open > li > a { padding:14px 24px; }
-      .dropdown { position:static !important; opacity:1 !important; visibility:visible !important; transform:none !important; box-shadow:none !important; border-radius:0 !important; }
+      .nav-links.open > li {
+        height:auto !important;
+        border-bottom:1px solid #f0f0f0;
+        width:100%;
+      }
+      .nav-links.open > li > a {
+        padding:16px 24px !important;
+        font-size:15px !important;
+        width:100%;
+        display:block !important;
+      }
+      .dropdown {
+        position:static !important;
+        opacity:1 !important;
+        visibility:visible !important;
+        transform:none !important;
+        box-shadow:none !important;
+        border-radius:0 !important;
+        display:block !important;
+        background:#f7f7f5 !important;
+        padding:8px 0 !important;
+      }
+      .dropdown a {
+        padding:12px 32px !important;
+        font-size:13px !important;
+      }
+      .nav-cta {
+        margin:16px 24px !important;
+        text-align:center !important;
+        border-radius:4px !important;
+      }
+
+      /* HOMEPAGE */
+      div[style*="height:90vh"] { height:70vh !important; }
+      div[style*="left:8%"] { left:5% !important; right:5% !important; top:50% !important; transform:translateY(-50%) !important; }
+      div[style*="left:8%"] h1 { font-size:38px !important; }
+      div[style*="display:flex;gap:16px;flex-wrap:wrap"] { flex-direction:column !important; }
+
+      /* I WANT TO */
+      div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns:1fr 1fr !important; }
+
+      /* FEATURE SECTIONS */
+      div[style*="min-height:580px"] { grid-template-columns:1fr !important; min-height:auto !important; }
+      div[style*="padding:80px 72px"] { padding:36px 20px !important; }
+      div[style*="min-height:580px"] img { min-height:260px !important; height:260px !important; }
+
+      /* TRUST */
+      div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns:1fr 1fr !important; }
+
+      /* KITCHEN BATHROOM SPLIT */
+      div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns:1fr !important; }
+      div[style*="min-height:480px"] { min-height:300px !important; }
+
+      /* PARTNERS */
+      div[style*="grid-template-columns:repeat(5,1fr)"] { grid-template-columns:1fr 1fr !important; }
+
+      /* PADDING */
+      div[style*="padding:80px 48px"] { padding:40px 16px !important; }
+      div[style*="padding:72px 48px"] { padding:40px 16px !important; }
+      div[style*="padding:100px 48px"] { padding:56px 16px !important; }
+      div[style*="padding:56px 48px"] { padding:40px 16px !important; }
+
+      /* FOOTER */
+      .footer-top { grid-template-columns:1fr !important; gap:32px !important; }
+      .footer-bottom { flex-direction:column !important; gap:12px !important; text-align:center !important; }
     }
 
   </style>
