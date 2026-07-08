@@ -2,219 +2,204 @@
 {% block content %}
 
 <!-- HERO VIDEO -->
-<div style="position:relative;height:90vh;overflow:hidden;margin-top:0;">
-  <video autoplay muted loop playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;filter:blur(2px) brightness(0.75);transform:scale(1.05);">
+<div style="position:relative;height:92vh;overflow:hidden;">
+  <video autoplay muted loop playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.7);transform:scale(1.05);">
     <source src="/static/hero-video.mp4" type="video/mp4">
   </video>
-  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.2) 100%);"></div>
-  <div style="position:absolute;top:50%;left:8%;transform:translateY(-50%);">
-    <p style="color:rgba(255,255,255,0.85);font-size:14px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:16px;">Melbourne's Trusted Builder</p>
-    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(42px,6vw,80px);font-weight:700;color:white;line-height:1.05;margin-bottom:32px;">Love where<br>you live.</h1>
-    <div style="display:flex;gap:16px;flex-wrap:wrap;">
-      <a href="/construction" style="display:inline-block;background:#4d8c2f;color:white;padding:16px 36px;font-weight:700;text-decoration:none;font-size:14px;letter-spacing:0.05em;text-transform:uppercase;">Explore Construction</a>
-      <a href="/contact" style="display:inline-block;background:white;color:#1a1a1a;padding:16px 36px;font-weight:700;text-decoration:none;font-size:14px;letter-spacing:0.05em;text-transform:uppercase;">Get a Free Quote</a>
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.4) 100%);"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;width:90%;">
+    <p style="color:rgba(255,255,255,0.9);font-size:12px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:20px;">Melbourne's Trusted Builder</p>
+    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(48px,7vw,96px);font-weight:700;color:white;line-height:1.0;margin-bottom:36px;">Love where<br>you live.</h1>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/contact" style="display:inline-block;background:#4d8c2f;color:white;padding:16px 40px;font-weight:600;text-decoration:none;font-size:13px;text-transform:uppercase;letter-spacing:0.1em;">Get a Free Quote</a>
+      <a href="/construction" style="display:inline-block;background:transparent;color:white;padding:16px 40px;font-weight:600;text-decoration:none;font-size:13px;text-transform:uppercase;letter-spacing:0.1em;border:1.5px solid rgba(255,255,255,0.7);">Our Services</a>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(255,255,255,0.95);display:flex;justify-content:center;">
+    <div style="max-width:1280px;width:100%;display:grid;grid-template-columns:repeat(4,1fr);">
+      <a href="/construction/new-homes" style="text-decoration:none;padding:24px 32px;border-right:1px solid #e5e5e5;transition:background 0.2s;" onmouseover="this.style.background='#f0f7eb'" onmouseout="this.style.background='transparent'">
+        <p style="color:#4d8c2f;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:4px;">I want to...</p>
+        <p style="color:#1a1a1a;font-size:14px;font-weight:700;">Build a New Home</p>
+      </a>
+      <a href="/construction/renovations" style="text-decoration:none;padding:24px 32px;border-right:1px solid #e5e5e5;transition:background 0.2s;" onmouseover="this.style.background='#f0f7eb'" onmouseout="this.style.background='transparent'">
+        <p style="color:#4d8c2f;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:4px;">I want to...</p>
+        <p style="color:#1a1a1a;font-size:14px;font-weight:700;">Renovate My Home</p>
+      </a>
+      <a href="/construction/extensions" style="text-decoration:none;padding:24px 32px;border-right:1px solid #e5e5e5;transition:background 0.2s;" onmouseover="this.style.background='#f0f7eb'" onmouseout="this.style.background='transparent'">
+        <p style="color:#4d8c2f;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:4px;">I want to...</p>
+        <p style="color:#1a1a1a;font-size:14px;font-weight:700;">Extend My Home</p>
+      </a>
+      <a href="/maintenance" style="text-decoration:none;padding:24px 32px;transition:background 0.2s;" onmouseover="this.style.background='#f0f7eb'" onmouseout="this.style.background='transparent'">
+        <p style="color:#4d8c2f;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:4px;">I want to...</p>
+        <p style="color:#1a1a1a;font-size:14px;font-weight:700;">Maintain My Property</p>
+      </a>
     </div>
   </div>
 </div>
 
-<!-- I WANT TO SECTION -->
-<div style="background:#1a1a1a;padding:0;">
-  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);">
-    <a href="/construction/new-homes" style="text-decoration:none;padding:28px 32px;border-right:1px solid rgba(255,255,255,0.1);transition:background 0.2s;" onmouseover="this.style.background='#4d8c2f'" onmouseout="this.style.background='transparent'">
-      <p style="color:rgba(255,255,255,0.5);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6px;">I want to...</p>
-      <p style="color:white;font-size:15px;font-weight:700;">Build a New Home</p>
-    </a>
-    <a href="/construction/renovations" style="text-decoration:none;padding:28px 32px;border-right:1px solid rgba(255,255,255,0.1);transition:background 0.2s;" onmouseover="this.style.background='#4d8c2f'" onmouseout="this.style.background='transparent'">
-      <p style="color:rgba(255,255,255,0.5);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6px;">I want to...</p>
-      <p style="color:white;font-size:15px;font-weight:700;">Renovate My Home</p>
-    </a>
-    <a href="/construction/extensions" style="text-decoration:none;padding:28px 32px;border-right:1px solid rgba(255,255,255,0.1);transition:background 0.2s;" onmouseover="this.style.background='#4d8c2f'" onmouseout="this.style.background='transparent'">
-      <p style="color:rgba(255,255,255,0.5);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6px;">I want to...</p>
-      <p style="color:white;font-size:15px;font-weight:700;">Extend My Home</p>
-    </a>
-    <a href="/maintenance" style="text-decoration:none;padding:28px 32px;transition:background 0.2s;" onmouseover="this.style.background='#4d8c2f'" onmouseout="this.style.background='transparent'">
-      <p style="color:rgba(255,255,255,0.5);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6px;">I want to...</p>
-      <p style="color:white;font-size:15px;font-weight:700;">Maintain My Property</p>
-    </a>
-  </div>
-</div>
-
-<!-- FEATURE SECTION 1 -->
-<div style="display:grid;grid-template-columns:1fr 1fr;min-height:640px;">
-  <div style="position:relative;overflow:hidden;">
-    <img src="/static/images/house2.webp" style="width:100%;height:100%;object-fit:cover;display:block;min-height:640px;">
-  </div>
-  <div style="padding:100px 80px;display:flex;flex-direction:column;justify-content:center;background:white;">
-    <p style="color:#4d8c2f;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:16px;">Full Home Renovations & Extensions</p>
-    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,44px);font-weight:700;line-height:1.15;margin-bottom:20px;">Transform your home into something extraordinary.</h2>
-    <p style="font-size:15px;color:#666;line-height:1.9;margin-bottom:32px;">From complete interior overhauls to seamless extensions, Basan Homes delivers full home renovations that modernise your space, maximise your lifestyle and significantly increase your property's value.</p>
-    <a href="/construction/renovations" style="display:inline-block;background:#4d8c2f;color:white;padding:14px 32px;font-weight:700;text-decoration:none;font-size:13px;text-transform:uppercase;letter-spacing:0.05em;align-self:flex-start;">Explore Renovations →</a>
-  </div>
-</div>
-
-<!-- FEATURE SECTION 2 -->
-<div style="display:grid;grid-template-columns:1fr 1fr;min-height:640px;">
-  <div style="padding:100px 80px;display:flex;flex-direction:column;justify-content:center;background:#f7f7f5;">
-    <p style="color:#4d8c2f;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:16px;">Customised New Builds</p>
-    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,44px);font-weight:700;line-height:1.15;margin-bottom:20px;">Your vision. Our expertise. One seamless build.</h2>
-    <p style="font-size:15px;color:#666;line-height:1.9;margin-bottom:32px;">We build fully custom homes from the ground up — managing everything from council permits and site preparation through to landscaping and final handover. Your dream home, delivered.</p>
-    <a href="/construction/new-homes" style="display:inline-block;background:#1a1a1a;color:white;padding:14px 32px;font-weight:700;text-decoration:none;font-size:13px;text-transform:uppercase;letter-spacing:0.05em;align-self:flex-start;">Explore New Builds →</a>
-  </div>
-  <div style="position:relative;overflow:hidden;">
-    <img src="/static/images/house3.webp" style="width:100%;height:100%;object-fit:cover;display:block;min-height:640px;">
-  </div>
-</div>
-
-<!-- TRUST POINTS -->
-<div style="padding:80px 48px;background:white;">
+<!-- SERVICES -->
+<div style="padding:100px 48px;background:white;">
   <div style="max-width:1280px;margin:0 auto;">
-    <div style="text-align:center;margin-bottom:56px;">
-      <p style="color:#4d8c2f;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:12px;">Why Basan Homes</p>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,48px);font-weight:700;line-height:1.1;">Building quality homes<br>for Melbourne's West.</h2>
+    <div style="text-align:center;margin-bottom:64px;">
+      <p style="color:#4d8c2f;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:12px;">What We Do</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:700;line-height:1.1;">Building dreams,<br>above standards.</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#e5e5e5;">
-      <div style="background:white;padding:60px 40px;text-align:center;">
-        <div style="font-size:40px;margin-bottom:16px;">🏅</div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:12px;">500+ Projects</h3>
-        <p style="font-size:13px;color:#666;line-height:1.8;">Hundreds of families across Melbourne's West have trusted us with their homes.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#f0f0f0;">
+      <div style="position:relative;overflow:hidden;height:520px;">
+        <img src="/static/images/house2.webp" style="width:100%;height:520px;object-fit:cover;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.0) 50%);"></div>
+        <div style="position:absolute;bottom:40px;left:40px;">
+          <p style="color:rgba(255,255,255,0.7);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;">Our Services</p>
+          <h3 style="font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:white;margin-bottom:16px;">Construction</h3>
+          <a href="/construction" style="display:inline-block;border:1.5px solid white;color:white;padding:10px 24px;font-weight:600;text-decoration:none;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;">Explore →</a>
+        </div>
       </div>
-      <div style="background:white;padding:60px 40px;text-align:center;">
-        <div style="font-size:40px;margin-bottom:16px;">✅</div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:12px;">Licensed & Insured</h3>
-        <p style="font-size:13px;color:#666;line-height:1.8;">Fully licensed builders and tradespeople on every single job.</p>
-      </div>
-      <div style="background:white;padding:60px 40px;text-align:center;">
-        <div style="font-size:40px;margin-bottom:16px;">💬</div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:12px;">Free Quotes</h3>
-        <p style="font-size:13px;color:#666;line-height:1.8;">Transparent pricing with no surprises. We come to you for a free on-site assessment.</p>
-      </div>
-      <div style="background:white;padding:60px 40px;text-align:center;">
-        <div style="font-size:40px;margin-bottom:16px;">⭐</div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:12px;">5-Star Rated</h3>
-        <p style="font-size:13px;color:#666;line-height:1.8;">Our clients love us. That's why so many come back and refer their friends.</p>
+      <div style="position:relative;overflow:hidden;height:520px;">
+        <img src="/static/images/handyman1.jpg" style="width:100%;height:520px;object-fit:cover;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.0) 50%);"></div>
+        <div style="position:absolute;bottom:40px;left:40px;">
+          <p style="color:rgba(255,255,255,0.7);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;">Our Services</p>
+          <h3 style="font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:white;margin-bottom:16px;">Maintenance</h3>
+          <a href="/maintenance" style="display:inline-block;border:1.5px solid white;color:white;padding:10px 24px;font-weight:600;text-decoration:none;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;">Explore →</a>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- KITCHEN & BATHROOM -->
-<div style="padding:80px 48px;background:white;">
+<div style="padding:0 48px 100px;background:white;">
   <div style="max-width:1280px;margin:0 auto;">
-    <div style="text-align:center;margin-bottom:56px;">
-      <p style="color:#4d8c2f;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:12px;">Specialising In</p>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,48px);font-weight:700;line-height:1.15;">Our Most Popular<br>Renovation Services</h2>
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#f0f0f0;">
       <div style="position:relative;overflow:hidden;height:420px;">
-        <img src="/static/images/kitchen.jpg" style="width:100%;height:420px;object-fit:cover;display:block;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.05) 60%);"></div>
+        <img src="/static/images/kitchen.jpg" style="width:100%;height:420px;object-fit:cover;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.0) 50%);"></div>
         <div style="position:absolute;bottom:36px;left:36px;">
-          <p style="color:rgba(255,255,255,0.7);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;">Renovations</p>
-          <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:white;margin-bottom:16px;">Kitchen Renovations</h3>
-          <a href="/construction/renovations/kitchen" style="display:inline-block;border:1.5px solid white;color:white;padding:10px 24px;font-weight:600;text-decoration:none;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;">Learn More →</a>
+          <p style="color:rgba(255,255,255,0.7);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;">Specialising In</p>
+          <h3 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:white;margin-bottom:14px;">Kitchen Renovations</h3>
+          <a href="/construction/renovations/kitchen" style="display:inline-block;border:1.5px solid white;color:white;padding:9px 22px;font-weight:600;text-decoration:none;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;">Learn More →</a>
         </div>
       </div>
       <div style="position:relative;overflow:hidden;height:420px;">
-        <img src="/static/images/bathroom.jpg" style="width:100%;height:420px;object-fit:cover;display:block;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.05) 60%);"></div>
+        <img src="/static/images/bathroom.jpg" style="width:100%;height:420px;object-fit:cover;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.0) 50%);"></div>
         <div style="position:absolute;bottom:36px;left:36px;">
-          <p style="color:rgba(255,255,255,0.7);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;">Renovations</p>
-          <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:white;margin-bottom:16px;">Bathroom Renovations</h3>
-          <a href="/construction/renovations/bathroom" style="display:inline-block;border:1.5px solid white;color:white;padding:10px 24px;font-weight:600;text-decoration:none;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;">Learn More →</a>
+          <p style="color:rgba(255,255,255,0.7);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;">Specialising In</p>
+          <h3 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:white;margin-bottom:14px;">Bathroom Renovations</h3>
+          <a href="/construction/renovations/bathroom" style="display:inline-block;border:1.5px solid white;color:white;padding:9px 22px;font-weight:600;text-decoration:none;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;">Learn More →</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- MAINTENANCE STRIP -->
-<div style="display:grid;grid-template-columns:1fr 1fr;min-height:480px;">
-  <div style="padding:100px 80px;display:flex;flex-direction:column;justify-content:center;background:#1a1a1a;">
-    <p style="color:#4d8c2f;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:16px;">Property Maintenance</p>
-    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,44px);font-weight:700;line-height:1.15;margin-bottom:20px;color:white;">Keep your property in perfect condition.</h2>
-    <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:1.9;margin-bottom:32px;">From emergency repairs to scheduled maintenance plans — our licensed tradespeople handle plumbing, electrical, painting, general repairs and more across Melbourne's West.</p>
-    <a href="/maintenance" style="display:inline-block;background:#4d8c2f;color:white;padding:14px 32px;font-weight:700;text-decoration:none;font-size:13px;text-transform:uppercase;letter-spacing:0.05em;align-self:flex-start;">Explore Maintenance →</a>
-  </div>
-  <div style="position:relative;overflow:hidden;min-height:480px;">
-    <img src="/static/images/painting.jpg" style="width:100%;height:100%;object-fit:cover;display:block;min-height:480px;">
-    <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);"></div>
-    <div style="position:absolute;bottom:40px;left:40px;right:40px;">
-      <p style="color:rgba(255,255,255,0.7);font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px;">Specialising In</p>
-      <h3 style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:white;margin-bottom:16px;">Full Home Painting</h3>
-      <a href="/maintenance/painting" style="display:inline-block;border:2px solid white;color:white;padding:10px 24px;font-weight:700;text-decoration:none;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;">Learn More →</a>
+<!-- WHY US — MINIMAL -->
+<div style="background:#f7f7f5;padding:100px 48px;">
+  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+    <div>
+      <p style="color:#4d8c2f;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:16px;">Why Basan Homes</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;line-height:1.15;margin-bottom:32px;">Melbourne West's most trusted builder.</h2>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid #e5e5e5;">
+          <div style="width:40px;height:40px;background:#4d8c2f;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;flex-shrink:0;">✓</div>
+          <span style="font-size:15px;font-weight:600;color:#1a1a1a;">Licensed & Fully Insured</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid #e5e5e5;">
+          <div style="width:40px;height:40px;background:#4d8c2f;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;flex-shrink:0;">✓</div>
+          <span style="font-size:15px;font-weight:600;color:#1a1a1a;">500+ Projects Completed</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid #e5e5e5;">
+          <div style="width:40px;height:40px;background:#4d8c2f;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;flex-shrink:0;">✓</div>
+          <span style="font-size:15px;font-weight:600;color:#1a1a1a;">Free No-Obligation Quotes</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid #e5e5e5;">
+          <div style="width:40px;height:40px;background:#4d8c2f;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;flex-shrink:0;">✓</div>
+          <span style="font-size:15px;font-weight:600;color:#1a1a1a;">On Time & On Budget</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;padding:20px 0;">
+          <div style="width:40px;height:40px;background:#4d8c2f;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;flex-shrink:0;">✓</div>
+          <span style="font-size:15px;font-weight:600;color:#1a1a1a;">5-Star Rated Service</span>
+        </div>
+      </div>
+      <div style="margin-top:36px;">
+        <a href="/contact" style="display:inline-block;background:#4d8c2f;color:white;padding:16px 36px;font-weight:600;text-decoration:none;font-size:13px;text-transform:uppercase;letter-spacing:0.1em;">Get a Free Quote →</a>
+      </div>
+    </div>
+    <div>
+      <img src="/static/images/house9.webp" style="width:100%;height:560px;object-fit:cover;display:block;">
     </div>
   </div>
 </div>
-
-<!-- CTA -->
 
 <!-- SERVICE PROVIDERS -->
-<div style="padding:72px 48px;background:#f7f7f5;">
+<div style="padding:80px 48px;background:white;">
   <div style="max-width:1280px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:48px;">
-      <p style="color:#4d8c2f;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:12px;">Our Partners</p>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,40px);font-weight:700;">Trusted service providers we work with.</h2>
+      <p style="color:#4d8c2f;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:12px;">Our Partners</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);font-weight:700;">Trusted service providers we work with.</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:16px;">
-      <div style="background:white;padding:20px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
-        <img src="/static/images/aroflo.png" alt="Aroflo" style="height:40px;object-fit:contain;">
-        <span style="font-size:12px;font-weight:700;color:#333;">Aroflo</span>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:#e5e5e5;">
+      <div style="background:white;padding:28px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <img src="/static/images/aroflo.png" alt="Aroflo" style="height:36px;object-fit:contain;">
+        <span style="font-size:11px;font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.05em;">Aroflo</span>
       </div>
-      <div style="background:white;padding:20px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
-        <img src="/static/images/xero.png" alt="Xero" style="height:40px;object-fit:contain;">
-        <span style="font-size:12px;font-weight:700;color:#333;">Xero</span>
+      <div style="background:white;padding:28px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <img src="/static/images/xero.png" alt="Xero" style="height:36px;object-fit:contain;">
+        <span style="font-size:11px;font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.05em;">Xero</span>
       </div>
-      <div style="background:white;padding:20px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
-        <img src="/static/images/vodafone.png" alt="Vodafone" style="height:40px;object-fit:contain;">
-        <span style="font-size:12px;font-weight:700;color:#333;">Vodafone</span>
+      <div style="background:white;padding:28px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <img src="/static/images/vodafone.png" alt="Vodafone" style="height:36px;object-fit:contain;">
+        <span style="font-size:11px;font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.05em;">Vodafone</span>
       </div>
-      <div style="background:white;padding:20px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
-        <img src="/static/images/commbank.png" alt="CommBank" style="height:40px;object-fit:contain;">
-        <span style="font-size:12px;font-weight:700;color:#333;">CommBank</span>
+      <div style="background:white;padding:28px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <img src="/static/images/commbank.png" alt="CommBank" style="height:36px;object-fit:contain;">
+        <span style="font-size:11px;font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.05em;">CommBank</span>
       </div>
-      <div style="background:white;padding:20px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
-        <img src="/static/images/bunnings.png" alt="Bunnings" style="height:40px;object-fit:contain;">
-        <span style="font-size:12px;font-weight:700;color:#333;">Bunnings</span>
+      <div style="background:white;padding:28px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <img src="/static/images/bunnings.png" alt="Bunnings" style="height:36px;object-fit:contain;">
+        <span style="font-size:11px;font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.05em;">Bunnings</span>
       </div>
-      <div style="background:white;padding:20px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
-        <img src="/static/images/bowens.png" alt="Bowens" style="height:40px;object-fit:contain;">
-        <span style="font-size:12px;font-weight:700;color:#333;">Bowens</span>
+      <div style="background:white;padding:28px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <img src="/static/images/bowens.png" alt="Bowens" style="height:36px;object-fit:contain;">
+        <span style="font-size:11px;font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.05em;">Bowens</span>
       </div>
-      <div style="background:white;padding:20px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
-        <img src="/static/images/beaumont.png" alt="Beaumont Tiles" style="height:40px;object-fit:contain;">
-        <span style="font-size:12px;font-weight:700;color:#333;">Beaumont Tiles</span>
+      <div style="background:white;padding:28px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <img src="/static/images/beaumont.png" alt="Beaumont Tiles" style="height:36px;object-fit:contain;">
+        <span style="font-size:11px;font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.05em;">Beaumont Tiles</span>
       </div>
-      <div style="background:white;padding:20px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
-        <img src="/static/images/dandy.png" alt="Dandy Choices" style="height:40px;object-fit:contain;">
-        <span style="font-size:12px;font-weight:700;color:#333;">Dandy Choices</span>
+      <div style="background:white;padding:28px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <img src="/static/images/dandy.png" alt="Dandy Choices" style="height:36px;object-fit:contain;">
+        <span style="font-size:11px;font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.05em;">Dandy Choices</span>
       </div>
-      <div style="background:white;padding:20px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
-        <img src="/static/images/doorstore.png" alt="The Door Store" style="height:40px;object-fit:contain;">
-        <span style="font-size:12px;font-weight:700;color:#333;">The Door Store</span>
+      <div style="background:white;padding:28px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <img src="/static/images/doorstore.png" alt="The Door Store" style="height:36px;object-fit:contain;">
+        <span style="font-size:11px;font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.05em;">The Door Store</span>
       </div>
-      <div style="background:white;padding:20px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
-        <img src="/static/images/reece.png" alt="Reece" style="height:40px;object-fit:contain;">
-        <span style="font-size:12px;font-weight:700;color:#333;">Reece</span>
+      <div style="background:white;padding:28px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <img src="/static/images/reece.png" alt="Reece" style="height:36px;object-fit:contain;">
+        <span style="font-size:11px;font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.05em;">Reece</span>
       </div>
-      <div style="background:white;padding:20px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
-        <img src="/static/images/wattyl.png" alt="Wattyl" style="height:40px;object-fit:contain;">
-        <span style="font-size:12px;font-weight:700;color:#333;">Wattyl</span>
+      <div style="background:white;padding:28px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <img src="/static/images/wattyl.png" alt="Wattyl" style="height:36px;object-fit:contain;">
+        <span style="font-size:11px;font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.05em;">Wattyl</span>
       </div>
-      <div style="background:white;padding:20px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
-        <img src="/static/images/csr.png" alt="CSR" style="height:40px;object-fit:contain;">
-        <span style="font-size:12px;font-weight:700;color:#333;">CSR</span>
+      <div style="background:white;padding:28px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <img src="/static/images/csr.png" alt="CSR" style="height:36px;object-fit:contain;">
+        <span style="font-size:11px;font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.05em;">CSR</span>
       </div>
-      
-      
-      
-      
-      
-      
     </div>
   </div>
 </div>
 
 <!-- CTA -->
-
+<div style="padding:100px 48px;text-align:center;background:#f7f7f5;">
+  <p style="color:#4d8c2f;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:16px;">Start Your Journey</p>
+  <h2 style="font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,56px);font-weight:700;line-height:1.1;margin-bottom:20px;">Start your dream home<br>journey today.</h2>
+  <p style="font-size:15px;color:#666;max-width:480px;margin:0 auto 36px;line-height:1.8;">Free no-obligation quotes across Melbourne's West.</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+    <a href="/contact" style="display:inline-block;background:#4d8c2f;color:white;padding:16px 40px;font-weight:600;text-decoration:none;font-size:13px;text-transform:uppercase;letter-spacing:0.1em;">Get a Free Quote</a>
+    <a href="/construction" style="display:inline-block;background:white;color:#1a1a1a;padding:16px 40px;font-weight:600;text-decoration:none;font-size:13px;text-transform:uppercase;letter-spacing:0.1em;border:1.5px solid #e5e5e5;">Explore Services</a>
+  </div>
+</div>
 
 {% endblock %}
