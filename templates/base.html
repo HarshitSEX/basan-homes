@@ -1058,9 +1058,7 @@ window.addEventListener('pageshow', function(event) {
     // s0.parentNode.insertBefore(s1,s0); })();
   </script>
 
-  <div class="icon">🔨</div></div>
 
-  <div class="sp-icon">🔨</div></div>
 
   <!-- MOBILE STICKY CTA -->
   <div id="mobile-cta">
@@ -1095,18 +1093,6 @@ window.addEventListener('pageshow', function(event) {
   </script>
 
 
-<div id="scroll-indicator" style="position:fixed;right:12px;top:50%;z-index:9999;font-size:26px;pointer-events:none;transition:top 0.1s;filter:none;">🏠</div>
-<script>
-window.addEventListener('scroll', () => {
-  const el = document.getElementById('scroll-indicator');
-  if (!el) return;
-  const scrolled = window.scrollY;
-  const total = document.body.scrollHeight - window.innerHeight;
-  const percent = scrolled / total;
-  el.style.top = (10 + percent * 80) + '%';
-  el.textContent = percent > 0.5 ? '🔨' : '🏠';
-});
-</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -1129,33 +1115,5 @@ document.addEventListener('DOMContentLoaded', function() {
 </html>
 <!-- This will be replaced, just checking append works -->
 <!-- This will be replaced, just checking append works -->
-<script>
-  window.addEventListener('scroll', () => {
-    const icons = document.querySelectorAll('.sp-icon');
-    if (window.scrollY > 100) {
-      icons.forEach(i => i.classList.add('visible'));
-    } else {
-      icons.forEach(i => i.classList.remove('visible'));
-    }
-  });
-</script>
-<script>
-  window.addEventListener('scroll', () => {
-    const indicator = document.getElementById('scroll-indicator');
-    if (!indicator) return;
-    const scrolled = window.scrollY;
-    const total = document.body.scrollHeight - window.innerHeight;
-    const percent = scrolled / total;
-    
-    // Move icon along right side
-    const topPos = 10 + (percent * 80);
-    indicator.style.top = topPos + '%';
-    
-    // Switch icon at halfway
-    if (percent > 0.5) {
-      indicator.textContent = '🔨';
-    } else {
-      indicator.textContent = '🏠';
-    }
-  });
+
 </script>
