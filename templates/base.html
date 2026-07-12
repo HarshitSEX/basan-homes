@@ -397,6 +397,44 @@
       .footer-bottom { flex-direction:column !important; gap:12px !important; text-align:center !important; }
     }
 
+
+    /* GLOBAL MOBILE OVERFLOW FIX */
+    html, body { max-width:100%; overflow-x:hidden !important; }
+    * { max-width:100%; box-sizing:border-box; }
+    img, video, iframe { max-width:100%; height:auto; }
+
+    @media (max-width:768px) {
+      /* Force all grids to single column */
+      div[style*="grid-template-columns:1fr 1fr"],
+      div[style*="grid-template-columns:repeat(2,1fr)"],
+      div[style*="grid-template-columns:repeat(3,1fr)"],
+      div[style*="grid-template-columns:repeat(4,1fr)"],
+      div[style*="grid-template-columns:repeat(5,1fr)"],
+      div[style*="grid-template-columns:repeat(6,1fr)"] {
+        grid-template-columns:1fr !important;
+      }
+      /* Reduce all big padding */
+      div[style*="padding:100px"] { padding:48px 20px !important; }
+      div[style*="padding:80px"] { padding:40px 20px !important; }
+      div[style*="padding:72px"] { padding:40px 20px !important; }
+      div[style*="80px 80px"], div[style*="100px 80px"] { padding:36px 20px !important; }
+      /* Hero */
+      div[style*="height:92vh"], div[style*="height:90vh"] { height:75vh !important; }
+      h1[style*="clamp"] { font-size:40px !important; }
+      /* Hero buttons stack */
+      div[style*="display:flex;gap:16px;justify-content:center"] { flex-direction:column !important; align-items:stretch !important; }
+      div[style*="display:flex;gap:16px;flex-wrap:wrap"] { flex-direction:column !important; }
+      /* Images fixed heights shrink */
+      img[style*="height:520px"], img[style*="height:560px"], img[style*="height:640px"] { height:300px !important; }
+      div[style*="height:520px"], div[style*="height:560px"] { height:300px !important; }
+      img[style*="height:420px"] { height:260px !important; }
+      div[style*="height:420px"] { height:260px !important; }
+      img[style*="height:480px"] { height:280px !important; }
+      div[style*="min-height:480px"], div[style*="min-height:520px"], div[style*="min-height:560px"], div[style*="min-height:640px"] { min-height:280px !important; }
+      /* I want to bar */
+      div[style*="grid-template-columns:repeat(4,1fr)"] a { padding:16px 20px !important; }
+    }
+
   </style>
 <script>
 window.addEventListener('pageshow', function(event) {
@@ -787,6 +825,44 @@ window.addEventListener('pageshow', function(event) {
       .footer-bottom { flex-direction:column !important; gap:12px !important; text-align:center !important; }
     }
 
+
+    /* GLOBAL MOBILE OVERFLOW FIX */
+    html, body { max-width:100%; overflow-x:hidden !important; }
+    * { max-width:100%; box-sizing:border-box; }
+    img, video, iframe { max-width:100%; height:auto; }
+
+    @media (max-width:768px) {
+      /* Force all grids to single column */
+      div[style*="grid-template-columns:1fr 1fr"],
+      div[style*="grid-template-columns:repeat(2,1fr)"],
+      div[style*="grid-template-columns:repeat(3,1fr)"],
+      div[style*="grid-template-columns:repeat(4,1fr)"],
+      div[style*="grid-template-columns:repeat(5,1fr)"],
+      div[style*="grid-template-columns:repeat(6,1fr)"] {
+        grid-template-columns:1fr !important;
+      }
+      /* Reduce all big padding */
+      div[style*="padding:100px"] { padding:48px 20px !important; }
+      div[style*="padding:80px"] { padding:40px 20px !important; }
+      div[style*="padding:72px"] { padding:40px 20px !important; }
+      div[style*="80px 80px"], div[style*="100px 80px"] { padding:36px 20px !important; }
+      /* Hero */
+      div[style*="height:92vh"], div[style*="height:90vh"] { height:75vh !important; }
+      h1[style*="clamp"] { font-size:40px !important; }
+      /* Hero buttons stack */
+      div[style*="display:flex;gap:16px;justify-content:center"] { flex-direction:column !important; align-items:stretch !important; }
+      div[style*="display:flex;gap:16px;flex-wrap:wrap"] { flex-direction:column !important; }
+      /* Images fixed heights shrink */
+      img[style*="height:520px"], img[style*="height:560px"], img[style*="height:640px"] { height:300px !important; }
+      div[style*="height:520px"], div[style*="height:560px"] { height:300px !important; }
+      img[style*="height:420px"] { height:260px !important; }
+      div[style*="height:420px"] { height:260px !important; }
+      img[style*="height:480px"] { height:280px !important; }
+      div[style*="min-height:480px"], div[style*="min-height:520px"], div[style*="min-height:560px"], div[style*="min-height:640px"] { min-height:280px !important; }
+      /* I want to bar */
+      div[style*="grid-template-columns:repeat(4,1fr)"] a { padding:16px 20px !important; }
+    }
+
   </style>
 
   <!-- LOADING SPINNER -->
@@ -901,6 +977,44 @@ window.addEventListener('pageshow', function(event) {
       /* FOOTER */
       .footer-top { grid-template-columns:1fr !important; gap:32px !important; }
       .footer-bottom { flex-direction:column !important; gap:12px !important; text-align:center !important; }
+    }
+
+
+    /* GLOBAL MOBILE OVERFLOW FIX */
+    html, body { max-width:100%; overflow-x:hidden !important; }
+    * { max-width:100%; box-sizing:border-box; }
+    img, video, iframe { max-width:100%; height:auto; }
+
+    @media (max-width:768px) {
+      /* Force all grids to single column */
+      div[style*="grid-template-columns:1fr 1fr"],
+      div[style*="grid-template-columns:repeat(2,1fr)"],
+      div[style*="grid-template-columns:repeat(3,1fr)"],
+      div[style*="grid-template-columns:repeat(4,1fr)"],
+      div[style*="grid-template-columns:repeat(5,1fr)"],
+      div[style*="grid-template-columns:repeat(6,1fr)"] {
+        grid-template-columns:1fr !important;
+      }
+      /* Reduce all big padding */
+      div[style*="padding:100px"] { padding:48px 20px !important; }
+      div[style*="padding:80px"] { padding:40px 20px !important; }
+      div[style*="padding:72px"] { padding:40px 20px !important; }
+      div[style*="80px 80px"], div[style*="100px 80px"] { padding:36px 20px !important; }
+      /* Hero */
+      div[style*="height:92vh"], div[style*="height:90vh"] { height:75vh !important; }
+      h1[style*="clamp"] { font-size:40px !important; }
+      /* Hero buttons stack */
+      div[style*="display:flex;gap:16px;justify-content:center"] { flex-direction:column !important; align-items:stretch !important; }
+      div[style*="display:flex;gap:16px;flex-wrap:wrap"] { flex-direction:column !important; }
+      /* Images fixed heights shrink */
+      img[style*="height:520px"], img[style*="height:560px"], img[style*="height:640px"] { height:300px !important; }
+      div[style*="height:520px"], div[style*="height:560px"] { height:300px !important; }
+      img[style*="height:420px"] { height:260px !important; }
+      div[style*="height:420px"] { height:260px !important; }
+      img[style*="height:480px"] { height:280px !important; }
+      div[style*="min-height:480px"], div[style*="min-height:520px"], div[style*="min-height:560px"], div[style*="min-height:640px"] { min-height:280px !important; }
+      /* I want to bar */
+      div[style*="grid-template-columns:repeat(4,1fr)"] a { padding:16px 20px !important; }
     }
 
   </style>
