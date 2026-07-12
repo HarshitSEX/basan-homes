@@ -1094,19 +1094,24 @@ window.addEventListener('pageshow', function(event) {
 
 
 
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  var dropdownParents = document.querySelectorAll('.nav-links > li');
-  dropdownParents.forEach(function(li) {
-    var link = li.querySelector('a');
-    var dropdown = li.querySelector('.dropdown');
-    if (dropdown && link) {
-      link.addEventListener('click', function(e) {
+  document.querySelectorAll('.nav-links > li').forEach(function(li) {
+    var topLink = li.querySelector(':scope > a');
+    var dropdown = li.querySelector(':scope > .dropdown');
+    if (dropdown && topLink) {
+      topLink.addEventListener('click', function(e) {
         if (window.innerWidth <= 768) {
           e.preventDefault();
+          e.stopPropagation();
+          // close others
+          document.querySelectorAll('.nav-links > li.expanded').forEach(function(other) {
+            if (other !== li) other.classList.remove('expanded');
+          });
           li.classList.toggle('expanded');
         }
-      });
+      }, true);
     }
   });
 });
