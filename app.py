@@ -63,10 +63,6 @@ def kitchen():
 def bathroom():
     return render_template("sub/detail/bathroom.html")
 
-@app.route("/construction/renovations/garden")
-def garden():
-    return render_template("sub/detail/garden.html")
-
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     sent = False
