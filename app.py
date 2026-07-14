@@ -48,10 +48,6 @@ def residential():
 def renovations():
     return render_template("sub/renovations.html")
 
-@app.route("/construction/renovations/full-home")
-def full_home():
-    return render_template("sub/detail/full-home.html")
-
 @app.route("/construction/renovations/kitchen")
 def kitchen():
     return render_template("sub/detail/kitchen.html")
