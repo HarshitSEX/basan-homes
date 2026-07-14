@@ -43,10 +43,6 @@ def sitemap():
 def home():
     return render_template("index.html")
 
-@app.route("/construction")
-def construction():
-    return render_template("construction.html")
-
 @app.route("/construction/residential")
 def residential():
     return render_template("sub/residential.html")
@@ -62,6 +58,14 @@ def kitchen():
 @app.route("/construction/renovations/bathroom")
 def bathroom():
     return render_template("sub/detail/bathroom.html")
+
+@app.route("/construction/renovations/fencing-landscaping")
+def fencing_landscaping():
+    return render_template("sub/detail/fencing-landscaping.html")
+
+@app.route("/construction/renovations/painting")
+def painting():
+    return render_template("sub/detail/painting.html")
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():

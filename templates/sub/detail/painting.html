@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-hero" style="height:70vh;">
+  <div class="page-hero-img" style="background-image:url('/static/images/painting.jpg');background-size:cover;background-position:center;"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="hero-badge">Full Home Painting</div>
+    <h1>Painting,<br><em>Done Beautifully</em></h1>
+    <p>Full home painting done properly.</p>
+    <a href="/contact" class="btn-white">Get a Quote</a>
+  </div>
+</div>
+
+<div class="section">
+  <div style="max-width:800px;">
+    <span class="section-label reveal">Full Home Painting</span>
+    <h2 class="reveal reveal-delay-1">Full Home <em style="color:#4d8c2f;">Painting</em></h2>
+    <p style="font-size:17px;color:#666;line-height:1.9;font-weight:300;" class="reveal reveal-delay-2">At Basan Homes, we don't just paint homes, we transform the way they look and feel. A professionally painted home brings new life to every room, enhancing its character, brightness, and overall appeal. Using premium-quality finishes and meticulous preparation, we deliver flawless results that stand the test of time. Whether refreshing your interiors, exteriors, or your entire home, we create finishes that elevate your space and leave a lasting impression.</p>
+  </div>
+</div>
+
+<div style="background:#f7f7f5;padding:100px 48px;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+      <div style="border-radius:16px;overflow:hidden;"><img src="/static/images/kitchen.jpg" alt="Kitchen" style="width:100%;height:220px;object-fit:cover;display:block;"></div>
+      <div style="border-radius:16px;overflow:hidden;"><img src="/static/images/bathroom.jpg" alt="Bathroom" style="width:100%;height:220px;object-fit:cover;display:block;"></div>
+      <div style="border-radius:16px;overflow:hidden;"><img src="/static/images/house2.webp" alt="Home" style="width:100%;height:220px;object-fit:cover;display:block;"></div>
+      <div style="border-radius:16px;overflow:hidden;"><img src="/static/images/house9.webp" alt="Home" style="width:100%;height:220px;object-fit:cover;display:block;"></div>
+    </div>
+  </div>
+</div>
+
+<div class="green-strip">
+  <h2 class="reveal">Planning a Painting Project?</h2>
+  <p class="reveal reveal-delay-1">Get in touch to talk through your project.</p>
+  <a href="/contact" class="btn-white reveal reveal-delay-2">Get a Quote</a>
+</div>
+{% endblock %}
