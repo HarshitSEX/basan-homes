@@ -5,6 +5,13 @@ from flask_mail import Mail, Message
 
 app = Flask(__name__)
 
+MAINTENANCE_MODE = True
+
+@app.before_request
+def check_maintenance():
+    if MAINTENANCE_MODE and request.path not in ('/static',) and not request.path.startswith('/static'):
+        return render_template("maintenance.html"), 503
+
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
