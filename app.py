@@ -5,7 +5,7 @@ from flask_mail import Mail, Message
 
 app = Flask(__name__)
 
-MAINTENANCE_MODE = os.environ.get('MAINTENANCE_MODE', 'false').lower() == 'true'
+MAINTENANCE_MODE = True
 
 @app.before_request
 def check_maintenance():
