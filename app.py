@@ -36,6 +36,34 @@ def sitemap():
 def home():
     return render_template("index.html")
 
+@app.route("/construction")
+def construction():
+    return render_template("construction.html")
+
+@app.route("/construction/residential")
+def residential():
+    return render_template("sub/residential.html")
+
+@app.route("/construction/renovations")
+def renovations():
+    return render_template("sub/renovations.html")
+
+@app.route("/construction/renovations/full-home")
+def full_home():
+    return render_template("sub/detail/full-home.html")
+
+@app.route("/construction/renovations/kitchen")
+def kitchen():
+    return render_template("sub/detail/kitchen.html")
+
+@app.route("/construction/renovations/bathroom")
+def bathroom():
+    return render_template("sub/detail/bathroom.html")
+
+@app.route("/construction/renovations/garden")
+def garden():
+    return render_template("sub/detail/garden.html")
+
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     sent = False

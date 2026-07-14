@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-hero">
+  <div class="page-hero-img" style="background-image:url('/static/images/construction.jpg');background-size:cover;background-position:center;"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="hero-badge">Construction</div>
+    <h1>Building Homes,<br><em>Start to Finish</em></h1>
+    <p>Residential construction across Melbourne's west.</p>
+    <a href="/contact" class="btn-white">Get a Quote</a>
+  </div>
+</div>
+
+<div class="section">
+  <span class="section-label reveal">What We Build</span>
+  <h2 class="reveal reveal-delay-1">Residential <em style="color:#4d8c2f;">Construction</em></h2>
+  <div class="cards">
+    <div class="card reveal reveal-delay-1">
+      <img src="/static/images/residential1.png" alt="Residential home build" style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:16px;">
+      <h3><a href="/construction/residential" style="color:inherit;text-decoration:none;">Residential Construction</a></h3>
+      <a href="/construction/residential" class="btn-outline">Learn More</a>
+    </div>
+  </div>
+</div>
+
+<div class="green-strip">
+  <h2 class="reveal">Have a Block Ready?</h2>
+  <p class="reveal reveal-delay-1">Get in touch to talk through your build.</p>
+  <a href="/contact" class="btn-white reveal reveal-delay-2">Get a Quote</a>
+</div>
+{% endblock %}
