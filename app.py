@@ -44,9 +44,6 @@ def hire_handyman():
 def real_estate():
     return render_template("real-estate.html")
 
-@app.route("/about")
-def about():
-    return render_template("about.html")
 
 @app.route("/construction")
 def construction():
